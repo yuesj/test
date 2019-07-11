@@ -1,0 +1,15 @@
+.tooltip-inner
+{
+	min-width: 600px;
+	max-width: 1000px;
+	color: #222222;
+	border: 1px solid #0BB20C;
+	background-color: #DAEEF5;
+	font-size: 18px;
+	text-align: left;
+	text-indent: 2em;
+}
+.tooltip-arrow
+{
+	border-bottom-color:#B7D2FF ;
+}

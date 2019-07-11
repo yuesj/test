@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title>考务管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font/font-awesome.min.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/core.css">
+		<link rel="stylesheet" href="../../css/examMng/examMng.css" />
+		<script src="../../js/respond.js"></script>
+		
+		
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+		
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
+		<script src="../../js/examMng/footer.js"></script>
+		<script src="../../js/examMng/item-knows-hover.js"></script>
+		
+	</head>
+	<body>
+		
+		<!--head begin-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown active"><a class="dropdown-toggle" href="item-knows.htm">题库管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="daily-practice.htm">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		
+		<!--body begin-->
+		<div class="main-container">
+			<div class="container body-box info-message">
+				<div class="message-title">
+					<p>题库知识点信息录入：</p>
+					<div class="searchbox">
+						<input type="text" class="form-control search" placeholder="请输入检索条件">
+						<i class="glyphicon glyphicon-search"></i>
+					</div>
+				</div>
+				<div class="message-main">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 left-message">
+							<div class="photobox">
+								<a href="item-add-bj.htm">编辑</a>
+								<img src="../../images/examMng/a.png">
+								<p class="photo-title">人民**执法资格考试题库初级(2016)</p>
+							</div>
+							<p class="now-title">当前题库</p>
+							<p class="now-knowledge"><span>知  识 点 ：</span><b>四章</b></p>
+							<p class="now-num">题目数量：<b>0</b></p>
+						</div>
+						<div class="col-lg-9 col-md-9 right-message">
+							<div class="input-group refer">
+						    	<input type="text" class="refer-input" placeholder="请输入知识点名称" onblur="tijiao(this)">
+						    	<span class="input-group-btn">
+						    		<button class="btn btn-default refer-btn" type="button" ><i class="glyphicon glyphicon-open"></i>提交</button>
+						    	</span>
+						    </div>
+						    <div class="line-bottom"></div>
+						    <div class="message-exam">
+						    	<a id="addtxt" href="item-type.htm" class="message-exam-title">第一章&nbsp;社会主义法治理念</a>
+						    	<p class="message-exam-subject">试题：0</p>
+								<div class="message-exam-over-bianji" style="display: none;">
+									<div>
+								    	<i class="glyphicon glyphicon-plus-sign"></i>
+								    	<a href="item-type-add-2.htm">添加试题</a>
+							    	</div>
+							    	<div>
+							    		<i class="glyphicon glyphicon-remove-circle"></i>
+								    	<a href="#close-cn" data-toggle="modal">删除</a>
+									</div>
+									<div>
+								    	<i class="glyphicon glyphicon-pencil"></i>
+								    	<a onclick="bianji(this)">编辑</a>
+									</div>
+									<div>
+										<a style="text-decoration: none;">试题：0</a>
+									</div>
+						    	</div>
+						    </div>
+						    <div class="message-exam">
+						    	<a id="addtxt"  href="item-type.htm" class="message-exam-title">第二章&nbsp;社会主义法治理念</a>
+						    	<p class="message-exam-subject">试题：0</p>
+								<div class="message-exam-over-bianji" style="display: none;">
+									<div>
+								    	<i class="glyphicon glyphicon-plus-sign"></i>
+								    	<a href="item-type-add-2.htm">添加试题</a>
+							    	</div>
+							    	<div>
+							    		<i class="glyphicon glyphicon-remove-circle"></i>
+								    	<a href="#close-cn" data-toggle="modal">删除</a>
+									</div>
+									<div>
+								    	<i class="glyphicon glyphicon-pencil"></i>
+								    	<a onclick="bianji(this)">编辑</a>
+									</div>
+									<div>
+										<a style="text-decoration: none;">试题：0</a>
+									</div>
+						    	</div>
+						    </div>
+						    <div class="message-exam">
+						    	<a href="item-type.htm" class="message-exam-title">第三章&nbsp;社会主义法治理念</a>
+						    	<p class="message-exam-subject">试题：0</p>
+								<div class="message-exam-over-bianji" style="display: none;">
+									<div>
+								    	<i class="glyphicon glyphicon-plus-sign"></i>
+								    	<a href="item-type-add-2.htm">添加试题</a>
+							    	</div>
+							    	<div>
+							    		<i class="glyphicon glyphicon-remove-circle"></i>
+								    	<a href="#close-cn" data-toggle="modal">删除</a>
+									</div>
+									<div>
+								    	<i class="glyphicon glyphicon-pencil"></i>
+								    	<a onclick="bianji(this)">编辑</a>
+									</div>
+									<div>
+										<a style="text-decoration: none;">试题：0</a>
+									</div>
+						    	</div>
+						    </div>
+						    <div class="message-exam">
+						    	<a href="item-type.htm" class="message-exam-title">第四章&nbsp;社会主义法治理念</a>
+						    	<p class="message-exam-subject">试题：0</p>
+								<div class="message-exam-over-bianji" style="display: none;">
+									<div>
+								    	<i class="glyphicon glyphicon-plus-sign"></i>
+								    	<a href="item-type-add-2.htm">添加试题</a>
+							    	</div>
+							    	<div>
+							    		<i class="glyphicon glyphicon-remove-circle"></i>
+								    	<a href="#close-cn" data-toggle="modal">删除</a>
+									</div>
+									<div>
+								    	<i class="glyphicon glyphicon-pencil"></i>
+								    	<a href="javascript:void(null)" onclick="bianji(this)">编辑</a>
+									</div>
+									<div>
+										<a style="text-decoration: none;">试题：0</a>
+									</div>
+						    	</div>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="tipmain">
+					<span class="tip">提示：</span>
+					<span>题库的知识点信息提交后，在试题非空的情况下只能修改名称不能删除，请仔细检查确认知识点信息准确后再点击提交按钮！</span>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--删除按钮弹窗-->
+		<div id="close-cn" class="modal fade" tabindex="-1">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		        	<!--删除header开始-->
+		            <div class="modal-header">
+		                <div class="table-header border-top-radius">
+		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+		                        <span class="white">&times;</span>
+		                    </button>
+		                    	删除
+		                </div>
+		            </div>
+		        	<!--删除header结束-->
+		        	<!--删除body开始-->
+		            <div class="modal-body">
+		            	<div class="text-center">
+		            		点击确定按钮会删除当前题库知识点信息，您确定要删除么吗？
+		                </div>
+		            </div>
+		        	<!--删除body结束-->
+		        	<!--删除footer开始-->
+		            <div class="modal-footer">
+		                <button class="btn btn-sm btn-danger" data-dismiss="modal">
+		                    <i class="icon-remove"></i>取消
+		                </button>
+		            	<button class="btn btn-sm btn-success" data-dismiss="modal" id="sure-close">
+		                    <i class="icon-ok"></i>确定
+		                </button>
+		            </div>
+		        	<!--删除footer结束-->
+		        </div>
+		    </div>
+		</div>
+		<!--删除按钮弹窗-->
+		
+		
+		<!--不能为空-->
+		<div id="baocun" class="modal fade" tabindex="-1">
+		    <div class="modal-dialog" style="width: 300px">
+		        <div class="modal-content">
+		        	<!--不能为空header开始-->
+		            <div class="modal-header">
+		                <div class="table-header border-top-radius">
+		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+		                        <span class="white">&times;</span>
+		                    </button>
+		                    	&nbsp;
+		                </div>
+		            </div>
+		        	<!--删除header结束-->
+		        	<!--删除body开始-->
+		            <div class="modal-body">
+		            	<div class="text-center">
+		            		不能为空
+		                </div>
+		            </div>
+		        	<!--删除body结束-->
+		        	<!--删除footer开始-->
+		            <div class="modal-footer">
+		                <button class="btn btn-sm btn-danger" data-dismiss="modal">
+		                    <i class="icon-remove"></i>取消
+		                </button>
+		            	<button class="btn btn-sm btn-success" data-dismiss="modal" id="sure-close">
+		                    <i class="icon-ok"></i>确定
+		                </button>
+		            </div>
+		        	<!--删除footer结束-->
+		        </div>
+		    </div>
+		</div>
+		<!--不能为空-->
+		
+		<!--body end-->
+		
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+		</div>
+		<!--footer end-->
+		<script type="text/javascript">
+			//打开模态窗口
+			$('#close-cn').modal({backdrop: 'static', keyboard: false , show: false});
+		</script>
+		
+	</body>
+</html>

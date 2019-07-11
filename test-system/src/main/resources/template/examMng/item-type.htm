@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title>考务管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link type="text/css" rel="stylesheet" href="../../css/examMng/core.css" />
+		<link rel="stylesheet" href="../../css/examMng/examMng.css" />
+		<script src="../../js/respond.js"></script>
+		<script src="../../js/jquery-1.9.1.min.js"></script>
+		<script src="../../js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
+	</head>
+	<body>
+		
+		<!--head begin-->
+		<nav class="navbar headbg">
+		  	<div class="container header">
+		  		<p class="additem-title text-center">添加试题</p>
+  			</div>
+		</nav>
+		<!--head end-->
+		
+		<!--body begin-->
+		<div class="main-container">
+			<div class="container info-add body-box">
+				<div class="info-add-box">
+					<p>试题类型：</p>
+		  			<a href="javascript:history.go(-1);"><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;返回</a>
+				</div>
+				<div class="additem-main">
+					<div class="additem-caption-box">
+						<p class="additem-caption">第一章&nbsp;社会主义法治理念</p>
+						<a class="btn btn-success additem-btn" href="item-type-add-2.htm">添加试题</a>
+					</div>
+					<div class="additem-content">
+						<a href="item-view.htm">
+							<div class="firstbox" style="margin-top: 30px;">
+									<div class="additem-content-title">一、判断题</div>
+									<div class="dottedline"></div>
+									<div class="additem-content-num">12题</div>
+							
+							</div>
+						</a>
+						<a href="item-view.htm">
+							<div class="firstbox">
+								<div class="additem-content-title">二、单项选择</div>
+								<div class="dottedline"></div>
+								<div class="additem-content-num">12题</div>
+							</div>
+						</a>
+						<a href="item-view.htm">
+							<div class="firstbox">
+								<div class="additem-content-title">三、多项选择</div>
+								<div class="dottedline"></div>
+								<div class="additem-content-num">12题</div>
+							</div>
+						</a>
+						<a href="item-view.htm">
+							<div class="firstbox" style="margin-bottom: 40px;">
+								<div class="additem-content-title">四、简答题</div>
+								<div class="dottedline"></div>
+								<div class="additem-content-num">12题</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+		</div>
+			
+		<script>
+			
+			var nums = 0;
+			$(document).ready(function(){
+				nums = $(".main-container .info-add").length;
+				footer_position();
+				//当浏览器窗口大小改变时，设置显示内容的高度  
+				$(window).resize(function(){
+					footer_position();
+				});
+			});
+			function footer_position(){
+				var winHeight = $(window).height();
+				var myHeight = winHeight-60-82-20;
+				//alert(myHeight+"-"+$(".main").height());
+				if($(".main-container").height() <= myHeight){
+					$(".kw-footer").css("position","fixed");
+					$(".kw-footer").css("bottom","0");
+					$(".main-container").css("min-height",myHeight+"px");
+				}else{
+					$(".kw-footer").css("position","initial");
+				}
+			}
+		</script>
+		<!--body end-->
+		
+	</body>
+</html>

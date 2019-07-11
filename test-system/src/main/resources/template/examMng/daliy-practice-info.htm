@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<title>考务管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font/font-awesome.min.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/core.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/exam-org-deta.css" />
+		<link rel="stylesheet" href="../../css/examMng/exam-org.css" />
+		<link type="text/css" href="../../css/examMng/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/examMng/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/examMng/zTreeStyle.css" />
+		<link rel="stylesheet" href="../../css/examMng/zTreeStyle.css" />
+		<script src="../../js/respond.js"></script>
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+		</script>
+		<!-- <![endif]-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>" + "<" + "/script>");
+		</script>
+
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<!--head begin-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown"><a class="dropdown-toggle" href="item-list.htm">题库管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown active"><a class="dropdown-toggle" href="#">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		<div class="main-container albox-pad-top padingtop0">
+			<div id="push-task" class="container body-box"  style="margin-top: 25px;">
+				<div id="" class="panel-heading col-lg-12 col-md-12 top-brgclr ">
+					<p class=" col-lg-10 col-md-10 col-sm-10 color-fff">——2016年初级考试每日练习（民警）</p>
+					<a  class="color-fff floatrit hoverin hoverout" href="daily-practice.htm"><span class="glyphicon glyphicon-arrow-left "></span>返回</a>
+				</div>
+				<div class="panel-body minheight">
+					<div class="input-group-box col-lg-12 col-md-12 col-sm-12">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">任务名称</div>
+							<div class="form-control height60 topicquantity color4E7AA7">2016年初级考试每日练习（民警）</div>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-12 col-md-12 col-sm-12">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">题库选择</div>
+							<div class="form-control height60 topicquantity color4E7AA7">人民**执法资格考试题库中级（2016）</div>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">开始日期</div>
+							<div class="form-control height60 topicquantity color4E7AA7">2016年04月23日 13:20</div>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">结束日期</div>
+							<div class="form-control height60 topicquantity color4E7AA7">2016年04月23日 13:20</div>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">开考时间</div>
+							<div class="form-control height60 topicquantity color4E7AA7">2016年04月23日 13:20</div>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">题目数量</div>
+							<div class="form-control height60 topicquantity color4E7AA7">8题</div>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-12 col-md-12 col-sm-12">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">人员选择</div>
+							<div class="form-control minheight250 padding-8 borderrightnone color4E7AA7">
+								张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；
+								李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹
+								；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思
+								；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；
+								李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；
+								王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；
+								王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；
+								李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺(；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅；
+							</div>
+							<div class="width7 input-group-addon glyuser1">
+								<span class="glyphicon glyphicon-user "></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 padding-10">
+						<div class="floatrit">
+							<span class="color666 ">共选择人员:　</span>
+							<span class="color4E7AA7 floatrit"> 2000人　 </span>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">任务定制</div>
+							<div class="form-control height60 topicquantity color4E7AA7">张三</div>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">提交时间</div>
+							<div class="form-control height60 topicquantity color4E7AA7">2016年04月23日 13:20</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+	</div>
+		<script type="text/javascript" src="../../js/tooltip.js" ></script>
+		<script type="text/javascript" src="../../js/examMng/datetime.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-ui-timepicker-addon.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-ui-timepicker-zh-CN.js"></script>
+		<script type="text/javascript" src="../../js/examMng/common.js" ></script>
+		<script type="text/javascript" src="../../js/jquery.selectlist.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+ 				 $('[data-toggle="tooltip"]').tooltip()
+			})
+		</script>
+	</body>
+
+</html>

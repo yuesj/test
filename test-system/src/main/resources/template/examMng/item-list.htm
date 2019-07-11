@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title>考务管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font/font-awesome.min.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/core.css">
+		<link rel="stylesheet" href="../../css/examMng/examMng.css">
+		<script src="../../js/respond.js"></script>
+		
+		
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+		
+		<!--[if IE]>
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+		<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
+
+	</head>
+	<body>
+		
+		<!--head begin-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown active"><a class="dropdown-toggle" href="item-list.htm">题库管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="daily-practice.htm">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		<script type="text/javascript">
+		</script>
+		<!--head end-->
+		
+		<!--body begin-->
+		<div class="main-container">
+			<div class="container body-box">
+				<div class="row content-box">
+					<div class="col-lg-3 col-md-3 content-border">
+						<a href="item-knows.htm">
+							<img src="../../images/examMng/a.png">
+							<p class="title text-center">协警资格考试（2016）</p>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 content-border">
+						<a href="item-knows.htm">
+							<img src="../../images/examMng/a.png">
+							<p class="title text-center">人民**执法资格考试题库初级考试题库初级（2016）</p>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 content-border">
+						<a href="item-knows.htm">
+							<img src="../../images/examMng/a.png">
+							<p class="title text-center">人民**执法资格考试题库中级（2016）</p>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 content-border">
+						<a href="item-knows.htm">
+							<img src="../../images/examMng/a.png">
+							<p class="title text-center">人民**执法资格考试题库高级（2016）</p>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-3 content-border">
+						<a href="item-add.htm">
+							<img class="new" src="../../images/examMng/toggle-expand-alt.png">
+							<p class="time text-center">&nbsp;</p>
+							<p class="title-new text-center">新增题库</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--body end-->
+		
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+		</div>
+		<!--footer end-->
+		
+		
+		<script>
+			var nums = 0;
+			$(document).ready(function(){
+				nums = $(".main-container .info-add").length;
+				footer_position();
+				//当浏览器窗口大小改变时，设置显示内容的高度  
+				$(window).resize(function(){
+					footer_position();
+				});
+			});
+			function footer_position(){
+				var winHeight = $(window).height();
+				var myHeight = winHeight-60-82-20;
+				//alert(myHeight+"-"+$(".main").height());
+				if($(".main-container").height() <= myHeight){
+					$(".kw-footer").css("position","fixed");
+					$(".kw-footer").css("bottom","0");
+					$(".main-container").css("min-height",myHeight+"px");
+				}else{
+					$(".kw-footer").css("position","initial");
+				}
+			}
+		</script>
+	</body>
+</html>

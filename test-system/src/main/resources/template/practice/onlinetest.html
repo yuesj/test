@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>在线练习</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/practice/text.css">
+		<script src="../../js/respond.js"></script>
+		
+		
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+		
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+		</script>
+		
+		<script src="../../js/practice/time.js"></script>
+		<script src="../../js/practice/online.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
+		<script src="../../js/practice/textarea.js"></script>
+		
+	</head>
+	<body>
+		<!--head begin-->
+		<div class="headbg position_fixed">
+			<div class="container header">
+				<div class="navheader">
+					<div class="logo pull-left">
+						<img src="../../images/logo.png" alt="系统首页">
+						<h3 class="pc_title">执法资格练习考试系统</h3>
+						<h3 class="phone_title"><a class="phone_return" href="#"><i class="glyphicon glyphicon-menu-left"></i></a>练习中心</h3>
+					</div>
+					<div class="nav-right">
+						<span class="numc">2&nbsp;</span>
+						<span class="numtitle">题</span>
+						<a type="button" class="answer_panel" data-toggle="modal" data-target="#dtmb"><span>答题面板</span><i class="glyphicon glyphicon-th-large"></i></a>
+						<div class="border-right"></div>
+						<input type="text" class="showTime">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-default btn-lg overtest" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-off gameover"></i><span>结束练习</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--head end-->
+		<!--body begin-->
+
+		<!--判断题 begin-->
+		<div class="main-container">
+		<div class="container main ">
+			<div class="single-box">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">判断题</span>
+						<span class="red_color">- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">1/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>1.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="choose-box">
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2">
+							<p><span>A</span>&nbsp;正确</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2">
+							<p><span>B</span>&nbsp;错误</p>
+						</label>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						
+						$("input[name='optionsRadios1']").change(function(){
+							$("input[name='optionsRadios1']:checked").each(function() { // 遍历name=test的多选框
+								// 每一个被选中项的值$(this).attr("id")
+								$("input[name='optionsRadios1']").each(function() { // 遍历name=test的多选框
+									// 每一个被选中项的值$(this).attr("id")
+									$(this).parent().css("border","1px solid #ccc");
+									$(this).parent().css("background-color","#fff");
+								});
+								$(this).parent().css("border","1px solid #66ccff");
+								$(this).parent().css("background-color","#f9f9f9");
+							});
+						});
+						
+					});
+				</script>
+			</div>
+			<!--判断题 end-->
+			
+			<!--判断题答案 begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">判断题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">1/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>1.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="choose-box">
+					<div class="radio">
+						<label class="correct-box blue-border">
+							<i class="glyphicon glyphicon-remove-sign "></i>
+							<p><span>A</span>&nbsp;正确</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="wrong-box default-border">
+							<i class="glyphicon glyphicon-ok-sign"></i>
+							<p><span>B</span>&nbsp;错误</p>
+						</label>
+					</div>
+				</div>
+				<div class="answer-box" style="padding:5px 0">
+					<span class="right-line"></span>
+					<span>正确答案：<b>B</b></span>
+				</div>
+			</div>
+			<!--判断题答案 end-->	
+			
+			<!--单选题 begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">单选题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">2/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>2.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="choose-box">
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1">
+							<p><span>A</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+							<p><span>B</span>&nbsp;政法干警既是执法司法工作者，也是群众工作者。政法干警既是执法司法工作者，也是群众工作者</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+							<p><span>C</span>&nbsp;人民群众是执法主体，法制建设要坚持群众运动</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+							<p><span>D</span>&nbsp;司法权必须坚持专门机关工作与群众路线相结合</p>
+						</label>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("input[name='optionsRadios2']").change(function(){
+							$("input[name='optionsRadios2']:checked").each(function() { // 遍历name=test的多选框
+								// 每一个被选中项的值$(this).attr("id")
+								$("input[name='optionsRadios2']").each(function() { // 遍历name=test的多选框
+									// 每一个被选中项的值$(this).attr("id")
+									$(this).parent().css("border","1px solid #ccc");
+									$(this).parent().css("background-color","#fff");
+								});
+								$(this).parent().css("border","1px solid #66ccff");
+								$(this).parent().css("background-color","#f9f9f9");
+							});
+						});
+					});
+				</script>
+			</div>
+			<!--单选题 end-->
+			
+			<!--单选题答案  begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">单选题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">2/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>2.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="choose-box">
+					<div class="radio">
+						<label class="wrong-box default-border">
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" disabled>
+							<p><span>A</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="wrong-box default-border">
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
+							<p><span>B</span>&nbsp;政法干警既是执法司法工作者，也是群众工作者。政法干警既是执法司法工作者，也是群众工作者</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="wrong-box default-border">
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
+							<p><span>C</span>&nbsp;人民群众是执法主体，法制建设要坚持群众运动</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="wrong-box blue-border">
+							<i class="glyphicon glyphicon-ok-sign"></i>
+							<p><span>D</span>&nbsp;政法干警既是执法司法工作者，也是群众工作者.政法干警既是执法司法工作者，也是群众工作者</p>
+						</label>
+					</div>
+				</div>
+				<div class="answer-box" style="padding:5px 0">
+					<span class="right-line"></span>
+					<span>正确答案：<b>D</b></span>
+				</div>
+			</div>
+			<!--单选题答案 end-->
+			
+			<!--多选题 begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">多选题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">3/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>3.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="choose-box">
+					<div class="checkbox">
+						<label class="choose">
+							<input type="checkbox" value="" name="optionsRadios3">
+							<p><span>A</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关</p>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label class="choose">
+							<input type="checkbox" value="" name="optionsRadios3">
+							<p><span>B</span>&nbsp;政法干警既是执法司法工作者，也是群众工作者</p>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label class="choose">
+							<input type="checkbox" value="" name="optionsRadios3">
+							<p><span>C</span>&nbsp;人民群众是执法主体，法制建设要坚持群众运动</p>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label class="choose">
+							<input type="checkbox" value="" name="optionsRadios3">
+							<p><span>D</span>&nbsp;司法权必须坚持专门机关工作与群众路线相结合</p>
+						</label>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$("input[name='optionsRadios3']").change(function(){
+							$("input[name='optionsRadios3']").each(function() { // 遍历name=test的多选框
+								// 每一个被选中项的值$(this).attr("id")
+								$(this).parent().css("border","1px solid #ccc");
+								$(this).parent().css("background-color","#fff");
+							});
+							$("input[name='optionsRadios3']:checked").each(function() { // 遍历name=test的多选框
+								// 每一个被选中项的值$(this).attr("id")
+								$(this).parent().css("border","1px solid #66ccff");
+								$(this).parent().css("background-color","#f9f9f9");
+							});
+						});
+					});
+				</script>
+			</div>
+			<!--多选题 end-->
+			
+			<!--多选题答案 begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">判断题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">1/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>3.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="choose-box">
+					<div class="checkbox">
+						<label class="wrong-box default-border">
+							<i class="glyphicon glyphicon-ok-sign"></i>
+							<p><span>A</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关。政法机关既是执法司法机关</p>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label class="correct-box blue-border">
+							<i class="glyphicon glyphicon-remove-sign"></i>
+							<p><span>B</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关。政法机关既是执法司法机关</p>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label class="wrong-box blue-border">
+							<i class="glyphicon glyphicon-ok-sign"></i>
+							<p><span>C</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关。政法机关既是执法司法机关</p>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label class="wrong-box default-border">
+							<input type="checkbox" value="" disabled>
+							<p><span>D</span>&nbsp;司法权必须坚持专门机关工作与群众路线相结合</p>
+						</label>
+					</div>
+				</div>
+				<div class="answer-box"  style="padding:5px 0">
+					<span class="right-line"></span>
+					<span>正确答案：<b>A</b>&nbsp;<b>C</b></span>
+				</div>
+			</div>
+			<!--多选题答案 end-->
+			
+			<!--带图片的选择题 begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">单选题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">4/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>4.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="row picture-box">
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<img src="../../images/practice/1.jpg">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<img src="../../images/practice/2.jpg">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<img src="../../images/practice/1.jpg">
+					</div>
+				</div>
+				<div class="choose-box">
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1">
+							<p><span>A</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option1">
+							<p><span>B</span>&nbsp;政法干警既是执法司法工作者，也是群众工作者。政法干警既是执法司法工作者，也是群众工作者</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option1">
+							<p><span>C</span>&nbsp;人民群众是执法主体，法制建设要坚持群众运动</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="choose">
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="option1">
+							<p><span>D</span>&nbsp;司法权必须坚持专门机关工作与群众路线相结合</p>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!--带图片的选择题 end-->
+			
+			<!--带图片的选择题答案 begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">单选题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">4/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>4.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。</p>
+				</div>
+				<div class="row picture-box">
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<img src="../../images/practice/1.jpg">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<img src="../../images/practice/2.jpg">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<img src="../../images/practice/1.jpg">
+					</div>
+				</div>
+				<div class="choose-box">
+					<div class="radio">
+						<label class="wrong-box default-border">
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" disabled>
+							<p><span>A</span>&nbsp;政法机关既是执法司法机关，也是群众工作机关</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="wrong-box default-border">
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
+							<p><span>B</span>&nbsp;政法干警既是执法司法工作者，也是群众工作者。政法干警既是执法司法工作者，也是群众工作者</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="wrong-box default-border">
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
+							<p><span>C</span>&nbsp;人民群众是执法主体，法制建设要坚持群众运动</p>
+						</label>
+					</div>
+					<div class="radio">
+						<label class="wrong-box blue-border">
+							<i class="glyphicon glyphicon-ok-sign"></i>
+							<p><span>D</span>&nbsp;政法干警既是执法司法工作者，也是群众工作者.政法干警既是执法司法工作者，也是群众工作者</p>
+						</label>
+					</div>
+				</div>
+				<div class="answer-box" style="padding:5px 0">
+					<span class="right-line"></span>
+					<span>正确答案：<b>D</b></span>
+				</div>
+			</div>
+			<!--带图片的选择题答案 end-->
+			
+			<!--简答题 begin-->
+			<div class="single-box" style="display: none;">
+				<div class="single-container">
+					<div class="single-title">
+						<span class="font-title">简答题</span>
+						<span>- 第一章社会主义法治理</span>
+						<span class="font-weight"><span style="color:#008080">5/</span>43题</span>
+					</div>
+					<div class="confirm-top">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="single-main">
+					<p>5.社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想。社会主义法制理念的基本含义就是社会主义法制的精髓和灵魂，是立法、执法、司法、守法和法律监督等法制领域的基本知道思想？</p>
+				</div>
+				<div class="choose-box">
+					<textarea id="textarea" class="form-control resolve" rows="3" placeholder="解答："></textarea>
+					<script> 
+				        var text = document.getElementById("textarea");
+				        autoTextarea(text);// 调用
+    				</script>
+					<script src="../../js/textarea.js"></script>
+				</div>
+			</div>
+			<!--简答题 end-->
+			<div class="bottom_line"></div>
+			
+			<div class="confirm">
+						<a class="btn btn btn-success" href="javascript:void(0)" onclick="questionsDel()" role="button">上一题</a>
+						<a class="btn btn-info" href="javascript:void(0)" onclick="questionsAdd()"  role="button">下一题</a>
+			</div>	
+		</div>
+		</div>
+		<!--body end-->
+	 
+		
+	</body>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog end-mtk-box" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        	<h4 class="modal-title text-tip" id="myModalLabel">练习提示：</h4>
+		      </div>
+		      <div class="modal-body bigbox">
+					<p class="text-over">本次练习共做题<b>&nbsp;53&nbsp;</b>道，正确<b>&nbsp;42&nbsp;</b>道；共用时<b>&nbsp;20&nbsp;</b>分钟；获得积分<b>&nbsp;10&nbsp;</b>分。</p>
+					<p class="text-over">本次练习中的错题已经自动添加到错题库中，可在“在线练习”页面点击错题练习查看和练习。</p>
+		      </div>
+		      <div class="modal-footer">
+			  		<button type="button" class="btn btn-danger">结束练习</button>
+					<button type="button" class="btn btn-info">继续练习-></button>
+		      </div>
+		    </div>
+	  </div>
+	</div>
+	<!-- 答题面板 -->
+	<div class="modal fade" id="dtmb" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog mtk-box" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title text-tip" id="myModalLabel">答题面板</h4>
+				</div>
+				<div class="modal-body bigbox">
+					<ul>
+						<li class="pdtbox border-bottom margin-top">
+							<p>判断题（10道，每题2分）</p>
+							<div class="title_num">
+								<a class="btn btn-success" href="#">1</a>
+								<a class="btn btn-success" href="#">2</a>
+								<a class="btn btn-primary" href="#">3</a>
+								<a class="btn btn-success" href="#">4</a>
+								<a class="btn btn-default" href="#">5</a>
+								<a class="btn btn-default" href="#">6</a>
+								<a class="btn btn-default" href="#">7</a>
+								<a class="btn btn-default" href="#">8</a>
+								<a class="btn btn-default" href="#">9</a>
+								<a class="btn btn-default" href="#">10</a>
+							</div>
+						</li>
+						<li class="pdtbox border-bottom">
+							<p class="margin-top">单项选择题（20道，每题2分）</p>
+							<div class="title_num">
+								<a class="btn btn-default" href="#">11</a>
+								<a class="btn btn-default" href="#">12</a>
+								<a class="btn btn-default" href="#">13</a>
+								<a class="btn btn-default" href="#">14</a>
+								<a class="btn btn-default" href="#">15</a>
+								<a class="btn btn-default" href="#">16</a>
+								<a class="btn btn-default" href="#">17</a>
+								<a class="btn btn-default" href="#">18</a>
+								<a class="btn btn-default" href="#">19</a>
+								<a class="btn btn-default" href="#">20</a>
+								<a class="btn btn-default" href="#">21</a>
+								<a class="btn btn-default" href="#">22</a>
+								<a class="btn btn-default" href="#">23</a>
+								<a class="btn btn-default" href="#">24</a>
+								<a class="btn btn-default" href="#">25</a>
+								<a class="btn btn-default" href="#">26</a>
+								<a class="btn btn-default" href="#">27</a>
+								<a class="btn btn-default" href="#">28</a>
+								<a class="btn btn-default" href="#">29</a>
+								<a class="btn btn-default" href="#">30</a>
+							</div>
+						</li>
+						<li class="pdtbox border-bottom">
+							<p class="margin-top">多项选择题（20道，每题2分）</p>
+							<div class="title_num">
+								<a class="btn btn-default" href="#">31</a>
+								<a class="btn btn-default" href="#">32</a>
+								<a class="btn btn-default" href="#">33</a>
+								<a class="btn btn-default" href="#">34</a>
+								<a class="btn btn-default" href="#">35</a>
+								<a class="btn btn-default" href="#">36</a>
+								<a class="btn btn-default" href="#">37</a>
+								<a class="btn btn-default" href="#">38</a>
+								<a class="btn btn-default" href="#">39</a>
+								<a class="btn btn-default" href="#">40</a>
+								<a class="btn btn-default" href="#">41</a>
+								<a class="btn btn-default" href="#">42</a>
+								<a class="btn btn-default" href="#">43</a>
+								<a class="btn btn-default" href="#">44</a>
+								<a class="btn btn-default" href="#">45</a>
+								<a class="btn btn-default" href="#">46</a>
+								<a class="btn btn-default" href="#">47</a>
+								<a class="btn btn-default" href="#">48</a>
+								<a class="btn btn-default" href="#">49</a>
+								<a class="btn btn-default" href="#">50</a>
+							</div>
+						</li>
+						<li class="pdtbox">
+							<p class="margin-top">多项选择题（20道，每题2分）</p>
+							<div class="title_num">
+								<a class="btn btn-default" href="#">31</a>
+								<a class="btn btn-default" href="#">32</a>
+								<a class="btn btn-default" href="#">33</a>
+								<a class="btn btn-default" href="#">34</a>
+								<a class="btn btn-default" href="#">35</a>
+								<a class="btn btn-default" href="#">36</a>
+								<a class="btn btn-default" href="#">37</a>
+								<a class="btn btn-default" href="#">38</a>
+								<a class="btn btn-default" href="#">39</a>
+								<a class="btn btn-default" href="#">40</a>
+								<a class="btn btn-default" href="#">41</a>
+								<a class="btn btn-default" href="#">42</a>
+								<a class="btn btn-default" href="#">43</a>
+								<a class="btn btn-default" href="#">44</a>
+								<a class="btn btn-default" href="#">45</a>
+								<a class="btn btn-default" href="#">46</a>
+								<a class="btn btn-default" href="#">47</a>
+								<a class="btn btn-default" href="#">48</a>
+								<a class="btn btn-default" href="#">49</a>
+								<a class="btn btn-default" href="#">50</a>
+							</div>
+						</li>
+					</ul>
+					<div class="mb_tip">
+						<a class="btn btn-success">&nbsp;</a>
+						<span>已做</span>
+						<a class="btn btn-default">&nbsp;</a>
+						<span>未做</span>
+						<a class="btn btn-primary">&nbsp;</a>
+						<span>当前</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 答题面板 -->
+	<script>
+		var nums = $(".main .single-box").length;
+		var num = 0;//记录当前答题的题号是几，默认是1
+		//跳下一题
+		function questionsAdd(){
+			if(num < nums-1){
+				num = num+1;
+				for(var i = 0; i<nums; i++){
+					if(num == i){
+						$(".main").children().eq(num).css("display","block");
+					}else{
+						$(".main").children().eq(i).css("display","none");
+					}
+				}
+			}
+			footer_position();
+		}
+		//跳上一题
+		function questionsDel(){
+			if(num > 0){
+				num = num-1;
+				for(var i = 0; i<nums; i++){
+					if(num == i){
+						$(".main").children().eq(num).css("display","block");
+					}else{
+						$(".main").children().eq(i).css("display","none");
+					}
+				}
+			}
+			footer_position();
+		}	
+			//打开模态窗口
+			$('#dtmb').modal({backdrop: 'static', keyboard: false , show: false});
+			$('#myModal').modal({backdrop: 'static', keyboard: false , show: false});
+			
+	</script>
+		
+</html>

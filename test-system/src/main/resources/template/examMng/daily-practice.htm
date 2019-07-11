@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<title>考务管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font/font-awesome.min.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/core.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/exam-org-deta.css" />
+		<link rel="stylesheet" href="../../css/examMng/exam-org.css" />
+		<link type="text/css" href="../../css/examMng/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/examMng/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/examMng/zTreeStyle.css" />
+		<link rel="stylesheet" href="../../css/examMng/zTreeStyle.css" />
+		<script src="../../js/respond.js"></script>
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+		</script>
+		<!-- <![endif]-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>" + "<" + "/script>");
+		</script>
+
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		
+		<!--head begin-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown"><a class="dropdown-toggle" href="item-list.htm">题库管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown active"><a class="dropdown-toggle" href="#">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		
+		<div class="main-container albox-pad-top padingtop0">
+			<div id="push-task" class="container body-box" style="margin-top: 25px;">
+				<div id="" class="panel-heading col-lg-12 col-md-12 top-brgclr ">
+					<p class=" col-lg-10 col-md-10 col-sm-10 color-fff">每日练习定时推送任务列表</p>
+					<p id="edit-task" class="color-fff floatrit cursorpointer hoverin hoverout"><span class="glyphicon glyphicon-cog"></span>&nbsp;任务管理</p>
+					<p id="edit-task1" class="color-fff floatrit dpynone cursorpointer hoverin hoverout"><span class="glyphicon glyphicon-arrow-left"></span>返回</p>
+				</div>
+				<div class="panel-body minheight">
+					<div id="push-practice" class="stype2cls push-practice">
+						<div id="" class="tabth">
+							<table class="table" border="" cellspacing="" cellpadding="1">
+								<tr>
+									<th class="width7">控制</th>
+									<th class="width33">定时推送名称</th>
+									<th class="width10">每日练习</th>
+									<th class="width10">开始日期</th>
+									<th class="width15">日期</th>
+									<th class="width10">推送日期</th>
+									<th class="width15">任务状态</th>
+								</tr>
+							</table>
+						</div>
+						<div class="bdr-tab">
+							<table class="table" border="" cellspacing="5px" cellpadding="1">
+								<tr>
+									<td class="width7 bdr-rht hh"> <span class="glyphicon glyphicon-play "></span> </td>
+									<td class="width33 color4E7AA7 textalignleft">民警执法资格考试（基本级）试卷B</td>
+									<td class="width10 color4E7AA7">60题</td>
+									<td class="width10 ">2016-04-23</td>
+									<td class="width15">2016-04-23</td>
+									<td class="width10">09:00</td>
+									<td class="width15 ">未启动</td>
+								</tr>
+							</table>
+						</div>
+						<div class="bdr-tab">
+							<table class="table" border="" cellspacing="5px" cellpadding="1">
+								<tr>
+									<td class="width7 bdr-rht hh"><span class="glyphicon glyphicon-pause "></span></td>
+									<td class="width33 color4E7AA7 textalignleft">民警执法资格考试（基本级）试卷B</td>
+									<td class="width10 color4E7AA7">60题</td>
+									<td class="width10 ">2016-04-23</td>
+									<td class="width15">2016-04-23</td>
+									<td class="width10">09:30</td>
+									<td class="width15 colorgreen">已启动</td>
+								</tr>
+							</table>
+						</div>
+						<div class="bdr-tab">
+							<table class="table" border="" cellspacing="5px" cellpadding="1">
+								<tr>
+									<td class="width7 bdr-rht hh"><span class="glyphicon glyphicon-minus-sign colorgray"></span></td>
+									<td class="width33 color4E7AA7 textalignleft">民警执法资格考试（基本级）试卷B</td>
+									<td class="width10 color4E7AA7">60题</td>
+									<td class="width10 ">2016-04-23</td>
+									<td class="width15">2016-04-23</td>
+									<td class="width10">14:30</td>
+									<td class="width15 colorgray ">已结束</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id="taskmanag" class="stype2cls push-practice dpynone">
+						<div id="" class="tabth">
+							<table class="table" border="" cellspacing="" cellpadding="1">
+								<tr>
+									<th class="width7">序号</th>
+									<th class="width33">定时推送名称</th>
+									<th class="width10">每日练习</th>
+									<th class="width10">开始日期</th>
+									<th class="width15">日期</th>
+									<th class="width10">推送日期</th>
+									<th class="width15">操作</th>
+								</tr>
+							</table>
+						</div>
+						<div class="minheight250">
+							<div class="bdr-tab freebtn">
+								<table class="table" border="" cellspacing="5px" cellpadding="1">
+									<tr>
+										<td class="width7 bdr-rht">
+											<div class="bigbox">
+												<div class="smallbox">
+												</div>
+											</div>
+										</td>
+										<td class="width33 color4E7AA7 textalignleft">民警执法资格考试（基本级）试卷B</td>
+										<td class="width10 color4E7AA7">60题</td>
+										<td class="width10 ">2016-04-23</td>
+										<td class="width15">2016-04-23</td>
+										<td class="width10">09:00</td>
+										<td class="width15 colorgray">
+											<div id="" class="floatleft cursorpointer">
+												<span class="glyphicon glyphicon-edit spmar"></span><span class="color4E7AA7 ">修改</span>
+											</div>
+											<div id="" class="floatrit cursorpointer">
+												<span class="glyphicon glyphicon-remove-sign colorred spmar"></span><span class="colorred ">删除</span>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="bdr-tab freebtn">
+								<table class="table" border="" cellspacing="5px" cellpadding="1">
+									<tr>
+										<td class="width7 bdr-rht">
+											<div class="bigbox">
+												<div class="smallbox">
+												</div>
+											</div>
+										</td>
+										<td class="width33 color4E7AA7 textalignleft">民警执法资格考试（基本级）试卷B</td>
+										<td class="width10 color4E7AA7">60题</td>
+										<td class="width10 ">2016-04-23</td>
+										<td class="width15">2016-04-23</td>
+										<td class="width10">09:30</td>
+										<td class="width15 colorgray">
+											<div id="" class="floatleft cursorpointer">
+												<span class="glyphicon glyphicon-edit spmar"></span><span class="color4E7AA7 ">修改</span>
+											</div>
+											<div id="" class="floatrit cursorpointer">
+												<span class="glyphicon glyphicon-remove-sign colorred spmar"></span><span class="colorred ">删除</span>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="bdr-tab freebtn">
+								<table class="table" border="" cellspacing="5px" cellpadding="1">
+									<tr>
+										<td class="width7 bdr-rht">
+											<div class="bigbox">
+												<div class="smallbox">
+												</div>
+											</div>
+										</td>
+										<td class="width33 color4E7AA7 textalignleft">民警执法资格考试（基本级）试卷B</td>
+										<td class="width10 color4E7AA7">60题</td>
+										<td class="width10 ">2016-04-23</td>
+										<td class="width15">2016-04-23</td>
+										<td class="width10">14:30</td>
+										<td class="width15 colorgray">
+											<div id="" class="floatleft">
+												<span class="glyphicon glyphicon-edit spmar"></span><span class="color4E7AA7 ">修改</span>
+											</div>
+											<div id="" class="floatrit">
+												<span class="glyphicon glyphicon-remove-sign colorred spmar"></span><span class="colorred ">删除</span>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="border100">
+						</div>
+						<div class="bdr-tab bdr-tabadd">
+							<a href="add-daily-practice.htm">
+								<span class="glyphicon glyphicon-plus-sign floatleft"></span>&nbsp;添加新的定时推送任务
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+	</div>
+		<script type="text/javascript" src="../../js/examMng/datetime.js"></script>
+		<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-ui-timepicker-addon.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-ui-timepicker-zh-CN.js"></script>
+		<script type="text/javascript" src="../../js/jquery.selectlist.js"></script>
+		<script type="text/javascript" src="../../js/examMng/daily-practice.js"></script>
+		<script type="text/javascript" src="../../js/examMng/common.js" ></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>

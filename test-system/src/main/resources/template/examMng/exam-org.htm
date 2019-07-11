@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<title>考务管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font/font-awesome.min.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/core.css">
+		 <link rel="stylesheet" type="text/css" href="../../css/examMng/exam-org-deta.css"/>
+		<link rel="stylesheet" href="../../css/examMng/exam-org.css" />
+		<script src="../../js/respond.js"></script>
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+		</script>
+		<!-- <![endif]-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>" + "<" + "/script>");
+		</script>
+
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+
+		<!--head begin-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown"><a class="dropdown-toggle" href="item-list.htm">题库管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown active"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="daily-practice.htm">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		<div class="main-container">
+			<div class="container body-box">
+				<div class="col-lg-12 col-md-12  top-brgclr ">
+					<p class="col-lg-10 col-md-10 color-fff">已组织考试列表：</p>
+					
+						<div id="" class="add-exam col-lg-2 col-md-2 col-sm-2 hover1 hover2">
+							<span class="glyphicon glyphicon-plus-sign margintop4"></span><span>&nbsp;新增考试</span>
+						</div>
+				</div>
+				<div class="panel-body minheight">
+					
+					<table class="table no-border no-part-border" border="0" cellspacing="" cellpadding="">
+
+						<tr class="  no-part-border">
+							<th> </th>
+							<th>考试时间</th>
+							<th>考试名称</th>
+							<th>考生人数</th>
+							<th> </th>
+							<th>考试状态</th>
+						</tr>
+					<tr class="no-border no-part-border tr-hover tr1 ">
+								<td class="bdr-tp-lt-bon">
+									<p class="padding-top">1</p>
+								</td>
+								<td class="bdr-tp-bon brg-clor-bdr">
+									<p class="fontwigt">2016-6-19</p>
+									<p>14:30</p>
+								</td>
+								<td class="bdr-tp-bon">
+									<span class="padding-top clor-red lineheight38 txtleft">某某市公安局2016年度第二批执法资格考试（中级）</span>
+								</td>
+								<td class="img-position bdr-tp-bon">
+									<p class="padding-top"><span class="sp-clr-green">-</span> / 60人</p>
+								</td>
+
+								<td class="bdr-tp-bon">
+									<img src="../../images/webcam.png" />
+								</td>
+								<td class="bdr-tp-rt-bon">
+									<p id="weifabu" class="padding-top">未发布</p>
+								</td>
+							</tr>
+						</table>
+					
+					
+						<table class="table no-border no-part-border" border="0" cellspacing="" cellpadding="">
+							<tr class=" no-border no-part-border tr-hover tr2">
+								<td class="bdr-tp-lt-bon">
+									<p class="padding-top">2</p>
+								</td>
+								<td class="bdr-tp-bon brg-clor-bdr">
+									<p class="fontwigt">2016-6-19</p>
+									<p>14:30</p>
+								</td>
+								<td class="bdr-tp-bon">
+									<span class="padding-top lineheight38 txtleft">某某市公安局2016年度第二批执法资格考试（中级）</span>
+								</td>
+								<td class="img-position bdr-tp-bon">
+									<p class="padding-top"><span class="sp-clr-green">55</span> / 60人</p>
+								</td>
+
+								<td class="bdr-tp-bon">
+									<img src="../../images/webcam.png" />
+								</td>
+								<td class="bdr-tp-rt-bon">
+									<p id="yuejuanzhong" class="padding-top">阅卷中...</p>
+								</td>
+							</tr>
+						</table>
+					
+						<table class="table no-border no-part-border" border="0" cellspacing="" cellpadding="">
+
+							<tr class=" no-border no-part-border tr-hover tr3">
+								<td class="bdr-tp-lt-bon ">
+									<p class="padding-top">3</p>
+								</td>
+								<td class="bdr-tp-bon brg-clor-bdr">
+									<p class="fontwigt">2016-6-19</p>
+									<p>14:30</p>
+								</td>
+								<td class="bdr-tp-bon">
+									<span class="padding-top lineheight38 txtleft">某某市公安局2016年度第二批执法资格考试（中级）</span>
+								</td>
+								<td class="img-position bdr-tp-bon">
+									<p class="padding-top"><span class="sp-clr-green">55</span> / 60人</p>
+								</td>
+
+								<td class="bdr-tp-bon">
+									<img src="../../images/webcam.png" />
+								</td>
+								<td class="bdr-tp-rt-bon">
+									<p id="kaoshizhong" class="padding-top">考试中...</p>
+								</td>
+							</tr>
+						</table>
+				
+						<table class="table no-border no-part-border" border="0" cellspacing="" cellpadding="">
+						<tr class=" no-border no-part-border tr-hover tr2">
+								<td class="bdr-tp-lt-bon">
+									<p class="padding-top">4</p>
+								</td>
+								<td class="bdr-tp-bon brg-clor-bdr">
+									<p class="fontwigt">2016-6-19</p>
+									<p>14:30</p>
+								</td>
+								<td class="bdr-tp-bon">
+									<span class="padding-top lineheight38 txtleft">某某市公安局2016年度第二批执法资格考试（中级）</span>
+								</td>
+								<td class="img-position bdr-tp-bon">
+									<p class="padding-top"><span class="sp-clr-green">55</span> / 60人</p>
+								</td>
+
+								<td class="bdr-tp-bon">
+									<img src="../../images/webcam.png" />
+								</td>
+								<td class="bdr-tp-rt-bon">
+									<p id="yifabu" class="padding-top">已发布</p>
+								</td>
+							</tr>
+						</table>
+					
+						<table class="table no-border no-part-border" border="0" cellspacing="" cellpadding="">
+						<tr class=" no-border no-part-border tr-hover tr2">
+								<td class="bdr-tp-lt-bon">
+									<p class="padding-top">2</p>
+								</td>
+								<td class="bdr-tp-bon brg-clor-bdr">
+									<p class="fontwigt">2016-6-19</p>
+									<p>14:30</p>
+								</td>
+								<td class="bdr-tp-bon">
+									<span class="padding-top lineheight38 txtleft">某某市公安局2016年度第二批执法资格考试（中级）</span>
+								</td>
+								<td class="img-position bdr-tp-bon">
+									<p class="padding-top"><span class="sp-clr-green">55</span> / 60人</p>
+								</td>
+
+								<td class="bdr-tp-bon">
+									<img src="../../images/webcam.png" />
+								</td>
+								<td class="bdr-tp-rt-bon">
+									<p id="yigongshi" class="padding-top">已公示</p>
+								</td>
+							</tr>
+						</table>
+					
+						<table class="table no-border no-part-border" border="0" cellspacing="0" cellpadding="0">
+						<tr class=" no-border no-part-border tr-hover tr2">
+								<td class="bdr-tp-lt-bon">
+									<p class="padding-top">2</p>
+								</td>
+								<td class="bdr-tp-bon brg-clor-bdr">
+									<p class="fontwigt">2016-6-19</p>
+									<p>14:30</p>
+								</td>
+								<td class="bdr-tp-bon">
+									<span class="padding-top lineheight38 txtleft">某某市公安局2016年度第二批执法资格考试（中级）</span>
+								</td>
+								<td class="img-position bdr-tp-bon">
+									<p class="padding-top"><span class="sp-clr-green">55</span> / 60人</p>
+								</td>
+
+								<td class="bdr-tp-bon">
+									<img src="../../images/webcam.png" />
+								</td>
+								<td class="bdr-tp-rt-bon">
+									<p id="daigongshi" class="padding-top">待公示</p>
+								</td>
+							</tr>
+						</table>
+					
+
+					
+					<div class="btn-group fanye floatrit">
+						<a id="btn-group-ionc-left" class="aposition"><span class="glyphicon glyphicon-triangle-left "></span></a>
+						<a id="btn-group-a1" class="btn-group-a1st aclick" style="background-color: #DEDEDE;">1</a>
+						<a id="btn-group-a2" class="btn-group-a1st aclick">2</a>
+						<a id="btn-group-a3" class="btn-group-a1st aclick">3</a>
+						<a id="btn-group-a4" class="btn-group-a1st aclick">4</a>
+						<a id="btn-group-a5" class="btn-group-a1st aclick">5</a>
+						<a id="btn-group-a6" class="btn-group-a1st aclick">6</a>
+						<a id="btn-group-shenglue" class="jumpup">......</a>
+						<a id="btn-group-a7" class="btn-group-a2st aclick">7</a>
+						<a id="btn-group-a8" class="btn-group-a2st aclick">8</a>
+						<a id="btn-group-a9" class="btn-group-a2st aclick">9</a>
+						<a id="btn-group-a10" class="btn-group-a2st aclick">10</a>
+						<a id="btn-group-a11" class="btn-group-a2st aclick">11</a>
+						<a id="btn-group-a12" class="btn-group-a2st aclick">12</a>
+						<a id="btn-group-a13" class="btn-group-a3st aclick">13</a>
+						<a id="btn-group-a14" class="btn-group-a3st aclick">14</a>
+						<a id="btn-group-a15" class="btn-group-a3st aclick">15</a>
+						<a id="btn-group-a16" class="btn-group-a3st aclick">16</a>
+						<a id="btn-group-a17" class="btn-group-a3st aclick">17</a>
+						<a id="btn-group-a18" class="btn-group-a3st aclick">18</a>
+						<a id="btn-group-a19" class="btn-group-a3st aclick">19</a>
+						<a id="btn-group-a20" class="btn-group-a3st aclick">20</a>
+						<a id="btn-group-a21" class="btn-group-a1st aclick">21</a>
+						<a id="btn-group-a22" class="btn-group-a1st aclick">22</a>
+						<a id="btn-group-ionc-right " class="aposition"><span class="glyphicon glyphicon-triangle-right "></span></a>
+					</div>
+				</div>
+
+			</div>
+
+			<!--footer begin-->
+			<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+	</div>
+			<!--footer end-->
+		</div>
+		</div>
+		<!--body end-->
+		<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../../js/practice/exam-org.js"></script>
+		<script type="text/javascript" src="../../js/examMng/common.js" ></script>
+		<script type="text/javascript">
+		//类名为minheight的div下的所有table元素点击跳转事件（跳转到‘exam-org-deta.htm’）
+			$(document).ready(function(){
+				
+			$(".minheight").children("table").click(function(){self.location='exam-org-deta.htm';})
+			//新增考试链接
+			$(".add-exam").click(function(){
+				self.location='exam-org-add-exam.htm';
+				})
+			$(".hover1").mouseover(function(){
+				$(this).css("background-color","#449d44")
+			})
+			$(".hover2").mouseleave(function(){
+				$(this).css("background-color","#5CB85C")
+			})
+			})
+		</script>
+	</body>
+
+</html>

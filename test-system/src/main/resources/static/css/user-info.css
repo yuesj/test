@@ -1,0 +1,41 @@
+.user-info{
+	width: 80%;
+	margin-left: 10%;
+	/*background-color: #F4F7FA;
+	border:1px solid #E6E6E6;*/
+	display: inline-table;
+	margin-top: 40px;
+	text-align: center;
+	text-align: left;
+}
+.input-group{
+	margin-top: 20px;
+}
+div.form-control{
+	line-height:34px ;
+}
+.width150{
+	width: 150px;
+}
+#updatePwd{
+	margin-left: 48%;
+	margin-bottom: 45px;
+	margin-top: 20px;
+}
+.marr{
+	width: 48%;
+	float: left !important;
+	margin-bottom: 20px;
+}
+.marl{
+	width: 48%;
+	float: right !important;
+}
+.pwdNotice{
+	position: absolute;
+	color: red;
+	z-index: 10;
+}
+.dpynone{
+	display: none;
+}

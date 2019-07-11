@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/examMng/core.css">
+		<link rel="stylesheet" type="text/css" href="../css/login.css">
+		<link rel="stylesheet" type="text/css" href="../css/kalendar.css">
+		<script src="../js/respond.js"></script>
+		
+	
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+				
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="../js/examMng/footer.js" ></script>
+		<script type="text/javascript" src="../js/login.js" ></script>
+		
+
+
+	</head>
+	<body>
+		<!--顶部导航开始-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+				<!-- Logo -->
+				<div class="logo pull-left" href="login_index.htm">
+					<img src="../images/logo.png" alt="系统首页">
+					<h3 class="pc_title">执法资格练习考试系统</h3>
+				</div>
+				<div class="mrts_phone">
+					<p>每日推送</p>
+					<a href="javascript:history.go(-1);"><i class="glyphicon glyphicon-menu-left"></i>返回</a>
+				</div>
+				<div class="navbar-collapse pull-right nav-main-collapse collapse">
+					<nav class="nav-main">
+						<ul id="topMain" class="nav nav-pills nav-main">
+							<li class="dropdown active"><a class="dropdown-toggle" href="login_index.htm">首 页</a></li>
+							<li class="dropdown mega-menu"><a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">练习中心 <span class="caret"></span></a>
+								<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+									<li><a href="login_tslx.htm"><i class="glyphicon glyphicon-time"></i> 每日推送</a></li>
+									<li><a href="practice/item-list.htm"><i class="glyphicon glyphicon-th-list"></i> 顺序练习</a></li>
+									<li><a href="practice/exam-wrong.html"><i class="glyphicon glyphicon-remove-circle"></i> 错题练习</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a class="dropdown-toggle" href="practice/exam-center.html">考试中心</a></li>
+							<li class="dropdown mega-menu">
+								<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									<i class="glyphicon glyphicon-user"></i> 
+									金涛 
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+									<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+									<li><a href="login.htm"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!--顶部导航结束-->
+		<!--body begin-->
+		<div class="container body-box index_main">
+			<div class=" index_record">
+				<div class="row border-bottom">
+					<div class="col-lg-5 col-md-5">
+						<p class="lxtsjl"><i class="glyphicon glyphicon-time"></i><span>每日练习提送记录</span></p>
+						<p class="lxtsjl_phone"><i class="glyphicon glyphicon-triangle-bottom"></i><span>张三的练习推送记录</span></p>
+						<div id="wrap"></div>
+						<div class="phone_jtlx_bg">
+							<a href="#">
+								<p>开始今日试题练习<i class="glyphicon glyphicon-arrow-right"></i></p>
+							</a>
+						</div>
+						<div class="phone_border_bottom"></div>
+						<div class="bs-callout bs-callout-info date_bottom">
+							<!--<p class="date_tl">图例</p>-->
+							<ul>
+								<li class="date_tl">
+									图<br>例
+								</li>
+								<li>
+									<span class="red_color nomal border">1</span>
+									<span>未练习</span>
+								</li>
+								<li>
+									<span class="nomal border no_pic">1</span>
+									<span>未练完</span>
+								</li>
+								<li>
+									<span class="nomal border yes_pic">1</span>
+									<span>已完成</span>
+								</li>
+								<li>
+									<span class="nomal border fontcolor">1</span>
+									<span>未开始</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-7">
+						<div class="right_column">
+							<div class="right_column_top">
+								<a href="#">
+									<div class="right_column_title phone_bg">
+										<p class="title_ico"><i class="glyphicon glyphicon-stats"></i></p>
+										<p class="title_nav ">每日推送练习统计</p>
+									<i class="glyphicon glyphicon-menu-right phone_right_jt"></i>
+									</div>
+								</a>
+								<div class="right_column_main">
+									<p>系统推送题库：<span class="font-weight">民警执法资格考试基本级题库（2016）</span></p>
+									<div class="overflow">
+										<p class="pull-left margin_right_100">系统推送天数：<span class="font-weight">25天/200题</span></p>
+										<p class="pull-left">完成练习天数：<span class="font-weight">23天/178题</span></p>
+									</div>
+									<p>每日练习完成率：<span class="font-weight">93%</span></p>
+									<!--<div class="progress">
+									<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+										95%
+									</div>
+								</div>-->
+								</div>	
+							</div>
+							<div class="right_column_bottom phonte_none">
+								<div class="right_column_title phone_bg">
+									<p class="title_ico"><i class="glyphicon glyphicon-stats"></i></p>
+									<p class="title_nav">个人顺序练习统计：</p>
+									<i class="glyphicon glyphicon-menu-right phone_right_jt"></i>
+								</div>
+								<div class="right_column_main">
+									<p>当前练习题库：<span class="font-weight">民警执法资格考试基本级题库（2016）</span></p>
+									<div class="overflow">
+										<p class="pull-left margin_right_100">题库试题数量：<span class="font-weight">11章/2536题</span></p>
+										<p class="pull-left">当前练习进度：<span class="font-weight">第二章/122题</span></p>
+									</div>
+									<p>顺序练习进度：<span class="font-weight">20%</span></p>
+									<!--<div class="progress">
+										<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+											40%
+										</div>
+									</div>-->
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+			<div class="login_notice padding-0-20">
+				<div class="row">
+					<div class="col-lg-3 col-md-3">
+						<div class="practice_list">
+							<a href="#">
+								<p class="marginleft5 phone_bg">
+									<img class="phone_img" src="../images/phb_pic.png">
+									<span class="practice_title">练习达人排行榜</span>
+									<span class="practice_date">（6月5日）</span>
+									<i class="glyphicon glyphicon-menu-right phone_right_jt"></i>
+								</p>
+							</a>
+							<div class="practice_line"></div>
+						</div>
+						<div class="practice_main">
+							<img src="../images/phb_pic.png">
+							<table class="table" cellpadding="0" cellspacing="0" border="0">
+								<tr class="practice_main_list">
+									<td width="25%" class="red_color">1</td>
+									<td width="33%" align="left">王晓辉：</td>
+									<td width="25%">93题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">2</td>
+									<td align="left">王小虎：</td>
+									<td>87题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">3</td>
+									<td align="left">金涛：</td>
+									<td>82题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">4</td>
+									<td align="left">王晓辉：</td>
+									<td>93题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">5</td>
+									<td align="left">王小虎：</td>
+									<td>87题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">6</td>
+									<td align="left">金涛：</td>
+									<td>82题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">7</td>
+									<td align="left">王晓辉：</td>
+									<td>93题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">8</td>
+									<td align="left">王小虎：</td>
+									<td>87题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">9</td>
+									<td align="left">金涛：</td>
+									<td>82题</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">10</td>
+									<td align="left">王晓辉：</td>
+									<td>93题</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3">
+						<div class="integral_list">
+							<a href="login_jfph.htm">
+								<p class="marginleft5 phone_bg margintop10">
+									<img class="phone_img" src="../images/phb_pic.png">
+									<span class="integral_title">积分达人排行榜</span>
+									<span class="integral_date">（6月5日）</span>
+									<i class="glyphicon glyphicon-menu-right phone_right_jt"></i>
+								</p>
+							</a>
+							<div class="integral_line"></div>
+						</div>
+						<div class="integral_main">
+							<img src="../images/phb_pic.png">
+							<table class="table" cellpadding="0" cellspacing="0" border="0">
+								<tr class="practice_main_list">
+									<td width="25%" class="red_color">1</td>
+									<td width="33%" align="left">王晓辉：</td>
+									<td width="25%">93分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">2</td>
+									<td align="left">王小虎：</td>
+									<td>87分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">3</td>
+									<td align="left">金涛：</td>
+									<td>82分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">4</td>
+									<td align="left">王晓辉：</td>
+									<td>93分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">5</td>
+									<td align="left">王小虎：</td>
+									<td>87分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">6</td>
+									<td align="left">金涛：</td>
+									<td>82分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">7</td>
+									<td align="left">王晓辉：</td>
+									<td>93分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">8</td>
+									<td align="left">王小虎：</td>
+									<td>87分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">9</td>
+									<td align="left">金涛：</td>
+									<td>82分</td>
+								</tr>
+								<tr class="practice_main_list">
+									<td class="red_color">10</td>
+									<td align="left">王晓辉：</td>
+									<td>93分</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 phonte_none">
+						<div class="inform phone_bg margintop10">
+							<p class="marginleft5 overflow">
+								<span class="inform_title">系统通知</span>
+								<i class="glyphicon glyphicon-volume-up"></i>
+							</p>
+							<div class="inform_line"></div>
+						</div>
+						<ul class="inform_main">
+							<li class="inform_main_list">
+								<span class="inform_num">1</span>
+								<a class="inform_tz" href="">关于组织2016年第一次执法资格考初级试的通知</a>
+								<span class="inform_date">6月5日</span>
+							</li>
+							<li class="inform_main_list">
+								<span class="inform_num">2</span>
+								<a class="inform_tz" href="">关于市局新版执法资格练习考试系统试运行的通知</a>
+								<span class="inform_date">6月5日</span>
+							</li>
+							<li class="inform_main_list">
+								<span class="inform_num">3</span>
+								<a class="inform_tz" href="">执法资格考试系统积分说明</a>
+								<span class="inform_date">6月5日</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--body end-->
+		
+		
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+		</div>
+		<!--footer end-->
+	</body>
+	<script type="text/javascript">
+	$(function(){
+/*************    方法     **************/
+	//判断是否是闰年,计算每个月的天数
+	function leapYear(year){
+		var isLeap = year%100==0 ? (year%400==0 ? 1 : 0) : (year%4==0 ? 1 : 0);
+		return new Array(31,28+isLeap,31,30,31,30,31,31,30,31,30,31);
+	}
+
+	//获得某月第一天是周几
+	function firstDay(day){
+		return day.getDay();
+	}
+
+	//获得当天的相关日期变量
+	function dateNoneParam(){
+		var day = new Date();
+		var today = new Array();
+		today['year'] = day.getFullYear();
+		today['month'] = day.getMonth();
+		today['date'] = day.getDate();
+		today['hour'] = day.getHours();
+		today['minute'] = day.getMinutes();
+		today['second'] = day.getSeconds();
+		today['week'] = day.getDay();
+		today['firstDay'] = firstDay(new Date(today['year'],today['month'],1)); 
+		return today;
+	}
+
+	//获得所选日期的相关变量
+	function dateWithParam(year,month){
+		var day = new Date(year,month);
+		var date = new Array();
+		date['year'] = day.getFullYear();
+		date['month'] = day.getMonth();
+		date['firstDay'] = firstDay(new Date(date['year'],date['month'],1));
+		return date;
+	}
+
+	//生成日历代码 的方法
+	//参数依次为 年 月 日 当月第一天(是星期几)
+	function kalendarCode(codeYear,codeMonth,codeDay,codeFirst){
+		kalendar_html = "<table id='kalendar' cellpadding=0 cellspacing=0 border=0>\n<tr id='select'>\n<td colspan=7>\n<div id='year'>\n<ul>\n<li class='selectChange'>\n<select name='year'>";
+		//年 选择
+		for(var i=2016;i<=codeYear+yearfloor;i++){
+			if(i == codeYear){
+				kalendar_html += "<option value='"+i+"' selected='true'>"+i+"年</option>";
+			}else{
+				kalendar_html += "<option value='"+i+"'>"+i+"年</option>";
+			}
+		}
+
+		kalendar_html += "</select>\n</li>\n</ul>\n</div>\n<div id='month'>\n<ul>\n<li class='selectChange'>\n<select name='year'>";
+
+		//月 选择
+		for(var j=0;j<=11;j++){
+			if(j == codeMonth){
+				kalendar_html += "<option value='"+j+"' selected='true'>"+month[j]+"</option>";
+			}else{
+				kalendar_html += "<option value='"+j+"'>"+month[j]+"</option>";
+			}
+		}
+
+		kalendar_html += "</select>\n</li>\n</ul>\n</div>\n</td>\n</tr>\n\n<tr id='week'>\n<td>\n<ul>\n<li class='weekend'>日</li>\n<li>一</li>\n<li>二</li>\n<li>三</li>\n<li>四</li>\n<li>五</li>\n<li class='weekend'>六</li>\n</ul>\n</td>\n</tr>\n\n<tr id='day'>\n<td colspan=7 style='padding:5px 0;'>\n";
+
+		//日 列表
+		for(var m=0;m<6;m++){//日期共 4-6 行
+			if(m >= Math.ceil((codeFirst+monthDays[codeMonth])/7)){//第五、六行是否隐藏				
+				kalendar_html += "<ul class='dayList hide dayListHide"+m+"'>\n";
+			}else{
+				kalendar_html += "<ul class='dayList dayListHide"+m+"'>\n";
+			}	
+
+			for(var n=0;n<7;n++){//列
+				if((7*m+n) < codeFirst || (7*m+n) >= (codeFirst+monthDays[codeMonth])){//某月日历中不存在的日期
+					kalendar_html += "<li class='null'></li>";
+				}else{
+					var tag_type = 0;
+					if(tag_type == 0){
+						kalendar_html += "<li class='choose'>"+(7*m+n+1-codeFirst)+"</li>";
+					}else if(tag_type == 1){
+						kalendar_html += "<li>"+(7*m+n+1-codeFirst)+"</li>";
+					}else{
+						kalendar_html += "<li>"+(7*m+n+1-codeFirst)+"</li>";
+					}
+				}
+			}
+			kalendar_html += "</ul>\n";
+		}
+		kalendar_html += "</td>\n</tr>\n</table>";
+		return kalendar_html;
+	}
+
+	//年-月select框改变数值 的方法
+	//参数依次为 1、操作对象(年下拉菜单 或 月下拉菜单) 2、被选中的下拉菜单值
+	function y_mChange(obj,stopId){
+		obj.val(stopId);
+	}
+
+	//修改日历列表 的方法
+	//参数依次为 操作对象(每一天) 月份 修改后的第一天是星期几 修改后的总天数 当天的具体日期
+	function dateChange(dateObj,dateMonth,dateFirstDay,dateTotalDays,dateCurrentDay){
+		//判断新日历有几行,需要显示或隐藏
+		var newLine = Math.ceil((dateFirstDay+monthDays[dateMonth])/7);//新行数
+		if(newLine > dateLine){//增加行
+			for(var i=dateLine;i<newLine;i++){
+				$('.dayListHide'+i).show();
+			}
+		}else if(newLine < dateLine){//减少行
+			for(var i=dateLine-1;i>=newLine;i--){
+				$('.dayListHide'+i).hide();
+			}
+		}
+		//重置日期排序
+		dateLine = newLine;
+		/*如果改变 月 后，选中月的总天数小于当前日期，
+		*如当前3.31，选中2月，可2月最多29天，则将当前日期改为选中月的最后一天，即2.39
+		*/
+		if(dateTotalDays < dateCurrentDay){
+			dateCurrentDay = dateTotalDays;
+		}
+		for(var i=0;i<7*newLine;i++){
+			if(i < dateFirstDay || i> (dateTotalDays+dateFirstDay-1)){//日历中 当月不存在的日期
+				dateObj.eq(i).text('').removeClass().addClass('null');
+			}else{
+				var tag_type = 0;
+				if(tag_type == 0){
+					dateObj.eq(i).removeClass().addClass('weekend choose');
+				}else if(tag_type == 1){
+					dateObj.eq(i).removeClass().addClass('weekend choose');
+				}else{
+					dateObj.eq(i).removeClass();
+				}
+				dateObj.eq(i).text(i+1-dateFirstDay);
+			}
+		}
+	}
+
+/*************    缓存节点和变量     **************/
+	var rili_location = $('#wrap');//日历代码的位置
+	var kalendar_html = '';//记录日历自身代码 的变量
+	var yearfloor = 10;//选择年份从1970到当前时间的后10年
+
+	var someDay = dateNoneParam();//修改后的某一天,默认是当天
+	var yearChange = someDay['year'];//改变后的年份，默认当年
+	var monthChange = someDay['month'];//改变后的年份，默认当月
+
+/*************   将日历代码放入相应位置，初始时显示此处内容      **************/
+
+	//获取时间，确定日历显示内容
+	var today = dateNoneParam();//当天
+
+	/*月-日 设置*/
+	var month = new Array('一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月');
+	var monthDays = leapYear(today['year']);//返回数组，记录每月有多少天
+	var weekDay = new Array('日','一','二','三','四','五','六');
+	// alert('年:'+someDay['year']+'\n月:'+someDay['month']+'\n日:'+someDay['date']+'\n星期:'+someDay['week']+'\n本月第一天星期:'+someDay['firstDay']);return false;
+
+	kalendar_html = kalendarCode(today['year'],today['month'],today['date'],today['firstDay']);
+	rili_location.html(kalendar_html);
+
+/*************   js写的日历代码中出现的节点     **************/
+	var yearPrev = $('#yearPrev');//上一年按钮
+	var yearNext = $('#yearNext');//下一年按钮
+	var monthPrev = $('#monthPrev');//上一月按钮
+	var monthNext = $('#monthNext');//下一月按钮
+	var selectYear = $('#year .selectChange select');//选择年份列表
+	var listYear = $('#year .selectChange select option');//所有可选年份
+	var selectMonth = $('#month .selectChange select');//选择月份列表
+	var listMonth = $('#month .selectChange select option');//所有可选月份
+	var dateLine = Math.ceil((monthDays[today['month']]+today['firstDay'])/7);;//当前日历中有几行日期，默认是 当年当月
+	var dateDay = $('#kalendar tr#day td ul.dayList li');//日历中的每一天
+
+
+/***************************/
+	//年 按钮事件
+	yearPrev.bind('click',function(){
+		yearChange --;
+		if(yearChange < 2000){
+			yearChange = 2000;
+			
+			return false;
+		}
+		//修改年份
+		y_mChange(selectYear,yearChange);
+		//重新获得 每月天数
+		monthDays = leapYear(yearChange);//alert(monthDays);
+		//新 年-月 下的对象信息
+		someDay = dateWithParam(yearChange,monthChange);
+		//修改 日期 列表
+		dateChange(dateDay,someDay['month'],someDay['firstDay'],monthDays[someDay['month']],today['date']);	
+	});
+
+	yearNext.bind('click',function(){
+		yearChange ++;
+		if(yearChange >= today['year']+yearfloor){
+			yearChange = today['year']+yearfloor;
+			
+			return false;
+		}
+		//修改年份
+		y_mChange(selectYear,yearChange);
+		//重新获得 每月天数
+		monthDays = leapYear(yearChange);//alert(monthDays);
+		//新 年-月 下的对象信息
+		someDay = dateWithParam(yearChange,monthChange);
+		//修改 日期 列表
+		dateChange(dateDay,someDay['month'],someDay['firstDay'],monthDays[someDay['month']],today['date']);	
+	});
+
+	// 月 按钮事件
+	monthPrev.bind('click',function(){
+		monthChange --;
+		if(monthChange >= 0){//仍在本年内
+			//修改月份
+			y_mChange(selectMonth,monthChange);			
+		}else{
+			monthChange = 11;//前一年的最后一个月
+			yearChange --;
+			if(yearChange < 1970){
+				yearChange = 1970;
+				alert('太久远也没意义了...');
+				return false;
+			}
+			//修改月份
+			y_mChange(selectMonth,monthChange);
+			//修改年份
+			y_mChange(selectYear,yearChange);
+			//重新获得 每月天数
+			monthDays = leapYear(yearChange);
+		}
+		//新 年-月 下的对象信息
+		someDay = dateWithParam(yearChange,monthChange);
+		//修改 日期 列表
+		dateChange(dateDay,someDay['month'],someDay['firstDay'],monthDays[someDay['month']],today['date']);	
+	});
+
+	monthNext.bind('click',function(){
+		monthChange ++;
+		if(monthChange <= 11){//仍在本年内
+			//修改月份
+			y_mChange(selectMonth,monthChange);
+		}else{
+			monthChange = 0;//下一年的第一个月
+			yearChange ++;
+			if(yearChange >= someDay['year']+yearfloor){
+				yearChange = someDay['year']+yearfloor;
+				
+				return false;
+			}
+			//修改月份
+			y_mChange(selectMonth,monthChange);
+			//修改年份
+			y_mChange(selectYear,yearChange);
+			//重新获得 每月天数
+			monthDays = leapYear(yearChange);
+		}
+		//新 年-月 下的对象信息
+		someDay = dateWithParam(yearChange,monthChange);
+		//修改 日期 列表
+		dateChange(dateDay,someDay['month'],someDay['firstDay'],monthDays[someDay['month']],today['date']);			
+	});
+
+	// 年 选择事件
+	selectYear.bind('change',function(){
+		//获得年份
+		yearChange = $(this).val();
+		//修改年份
+		y_mChange(selectYear,yearChange);
+		//重新获得 每月天数
+		monthDays = leapYear(yearChange);
+		//新 年-月 下的对象信息
+		someDay = dateWithParam(yearChange,monthChange);
+		//修改 日期 列表
+		dateChange(dateDay,someDay['month'],someDay['firstDay'],monthDays[someDay['month']],today['date']);
+	});
+
+	// 月 选择事件
+	selectMonth.bind('change',function(){
+		//获得 月
+		monthChange = $(this).val();
+		//修改月份
+		y_mChange(selectMonth,monthChange);
+		//新 年-月 下的对象信息
+		someDay = dateWithParam(yearChange,monthChange);
+		//修改 日期 列表
+		dateChange(dateDay,someDay['month'],someDay['firstDay'],monthDays[someDay['month']],today['date']);
+	});
+
+	
+
+});
+</script>
+</html>

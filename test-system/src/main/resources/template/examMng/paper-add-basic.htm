@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/paperMng.css">
+		<link rel="stylesheet" href="../../css/ace-ie.min.css" />
+		<script src="../../js/respond.js"></script>
+		
+	
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+				
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
+		<script>
+			$(function () { $("[data-toggle='tooltip']").tooltip(); });
+		</script>
+		<script src="../../js/practice/textarea.js"></script>
+	</head>
+	<body>
+		<!--head begin-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown"><a class="dropdown-toggle" href="item-list.htm">题库管理</a></li>
+						<li class="dropdown active"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="daily-practice.htm">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		
+		<!--body begin-->
+		<div class="main-container">
+			<div class="container body-box">
+				<div class="title-top">
+					<p>新增试卷——<span class="rcolor">试卷配置</span></p>
+					<a href="javascript:history.go(-1);" class="retun"><i class="glyphicon glyphicon-arrow-left"></i>返回</a>
+				</div>
+				<div class="paper-content position_ab">
+					<div class="outcontent">
+						<!--步骤 begin-->
+				        <div class="border_line">
+				        	<div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+								<ul class="wizard-steps">
+									<li class="nav_active">
+										<span class="step">1</span>
+										<span class="title">试卷基本信息</span>
+									</li>
+				
+									<li>
+										<span class="step">2</span>
+										<span class="title">试卷配置信息</span>
+									</li>
+				
+									<li>
+										<span class="step">3</span>
+										<span class="title">试卷发布</span>
+									</li>
+								</ul>
+							</div>
+				        </div><!-- /.col -->
+						<!--<div class="orderbox">
+							<div class="center1">
+								<div  class="cirle0">1</div>
+								<div id="stype2" class="line-blue stype2"></div>
+								<div class="cirle1 stype2">2</div>
+								<div id="stype2" class="line-blue stype3"></div>
+								<div class="cirle1 stype3">3</div>
+							</div>
+							<div class="describe-info">
+								<p class="active">试卷基本信息</p>
+								<p class="infos">试卷配置信息</p>
+								<p class="infot" >试卷发布</p>
+							</div>
+						</div>-->
+						<!--步骤 end-->
+						<!--试卷基本信息 begin-->
+						<div class="text-paper">
+							<div class="input-group input-group-lg paper-input">
+						 		<span class="input-group-addon">试卷名称</span>
+						  		<input type="text" value="请输入试卷名称，例如“民警执法资格考试等级考试试卷（中级）A卷”" class="form-control"  style="color:#999;" onBlur="textBlur(this)" onFocus="textFocus(this)" />
+							</div>
+							<div class="input-group input-group-lg paper-input">
+						 		<span class="input-group-addon">试卷总分</span>
+						  		<input type="text" value="请输入试卷总分，必须为整数" class="form-control"  style="color:#999;" onBlur="textBlur(this)" onFocus="textFocus(this)" />
+							</div>
+							<div class="input-group input-group-lg paper-textarea">
+						 		<span class="input-group-addon" >试卷简介</span>
+						  		<textarea id="textarea" type="text" class="form-control" style="color:#999;overflow-y:visible" onBlur="textBlur(this)" onFocus="textFocus(this)">请输入试卷所使用的题库、针对的执法资格等级（基础级、中级）以及主要考试人员等试卷简要介绍信息</textarea>
+						  		<script> 
+							        var text = document.getElementById("textarea");
+							        autoTextarea(text);// 调用
+			    				</script>
+								<!--<div class="textarea" contenteditable="true"></div>-->
+							</div>
+						</div>
+						<div class="bottom-paper">
+							<div class="input-group input-group-lg paper-input">
+						 		<span class="input-group-addon" >题库设置</span>
+						  		<input type="text" value="请从下列题库中选择本试卷所用题库类型" class="form-control"  style="color:#999;" />
+							</div>
+							<div id="exambox" class="row">
+								<div class="col-lg-3 col-md-3 setboeder" style="margin-left:14px;">
+									<img src="../../images/examMng/a.png">
+									<p class="setword">协警资格考试（2016）</p>
+									<img class="duigou" src="../../images/examMng/paper-right.png">
+								</div>
+								<div class="col-lg-3 col-md-3 setboeder">
+									<img src="../../images/examMng/a.png">
+									<p class="setword">人民**执法资格考试题库基本级基本级（2016）</p>
+									<img class="duigou" src="../../images/examMng/paper-right.png">
+								</div>
+								<div class="col-lg-3 col-md-3 setboeder">
+									<img src="../../images/examMng/a.png">
+									<p class="setword">协警资格考试（2016）</p>
+									<img class="duigou" src="../../images/examMng/paper-right.png">
+								</div>
+								<div class="col-lg-3 col-md-3 setboeder">
+									<img src="../../images/examMng/a.png">
+									<p class="setword">协警资格考试（2016）</p>
+									<img class="duigou" src="../../images/examMng/paper-right.png">
+								</div>
+							</div>
+							<script type="text/javascript">
+							//题库点击事件
+							$(document).ready(function(){
+								$("#exambox div").click(function(){
+									var num = $(this).index();
+									var nums = $("#exambox div").length;
+									for(var i = 0; i < nums; i++){
+										if(i == num){
+											$("#exambox").children().eq(num).css("border","1px solid #66ccff");
+											$("#exambox").children().eq(num).find(".duigou").css("display","block");
+										}else{
+											$("#exambox").children().eq(i).css("border","1px solid #ccc");
+											$("#exambox").children().eq(i).find(".duigou").css("display","none");
+										}
+									}
+								});
+							});
+							//文本框默认提示文字点击消失
+							function textFocus(el) {
+							    if (el.defaultValue == el.value) { el.value = ''; el.style.color = '#333'; }
+								$(el).parent().find(".validate_input").css("display","none");
+							}
+							function textBlur(el) {
+							    if (el.value == '') { el.value = el.defaultValue; el.style.color = '#999'; }
+							}
+							</script>
+						</div>
+						<!--试卷基本信息 end-->
+						<div class="btnbox">
+							<a class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i>取消</a>
+							<!--<a class="btn btn-info click_loading" onclick="javascript:window.location.href='paper-add-deploy.htm';">下一步<i class="glyphicon glyphicon-arrow-right" style="margin-right: 0;"></i></a>-->
+							<a class="btn btn-info click_loading">下一步<i class="glyphicon glyphicon-arrow-right" style="margin-right: 0;"></i></a>
+						</div>
+					</div>
+					<div class="loading_bg">
+						<img src="../../images/loading.gif">
+						<p>加载中，请稍后...</p>
+					</div>
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$(".btnbox .click_loading").click(function(){
+								$(".loading_bg").css("display","block");
+							});
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+		<!--body end-->
+		
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+		</div>
+		<!--footer end-->
+	</body>
+</html>

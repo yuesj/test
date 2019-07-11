@@ -1,0 +1,35 @@
+/*组织架构图标*/
+.org-ogn {
+	background: url('../images/org/ogn.gif') no-repeat center center;
+}
+
+.org-psm {
+	background: url('../images/org/psm.gif') no-repeat center center;
+}
+
+.org-car {
+	background: url('../images/org/car.gif') no-repeat center center;
+}
+
+/*地图显示*/
+.personLabel1 {
+	width:auto !important;
+	width:80px;
+	height: 15px;
+	text-align: center;
+	line-height: 12px;
+	background-color: blue;
+	font-size: 10px;
+	/* background-image: url(../images/disp/personLine.png)!important; */
+}
+
+.personLabel0 {
+	width:auto !important;
+	width:80px;
+	height: 15px;
+	text-align: center;
+	line-height: 12px;
+	background-color: gray;
+	font-size: 10px;
+	/* 	background-image: url(../images/disp/personNotLine.png) !important; */
+}

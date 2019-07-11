@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+		<title>考务管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font/font-awesome.min.css">
+		<!--[if IE 7]><link rel="stylesheet" href="../../css/font/font-awesome-ie7.min.css"><![endif]-->
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/core.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/exam-org-deta.css" />
+		<link rel="stylesheet" href="../../css/examMng/exam-org.css" />
+		<link type="text/css" href="../../css/examMng/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/examMng/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/examMng/zTreeStyle.css" />
+		<link rel="stylesheet" href="../../css/examMng/zTreeStyle.css" />
+		<script src="../../js/respond.js"></script>
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+		</script>
+		<!-- <![endif]-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>" + "<" + "/script>");
+		</script>
+
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<!--head begin-->
+		<!--顶部导航开始-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown"><a class="dropdown-toggle" href="item-list.htm">题库管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown active"><a class="dropdown-toggle" href="#">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		<div class="main-container albox-pad-top  padingtop0">
+			<div id="push-task" class="container body-box" style="margin-top: 25px;">
+				<div id="" class="panel-heading col-lg-12 col-md-12 top-brgclr ">
+					<p class=" col-lg-10 col-md-10 col-sm-10 color-fff">——添加每日练习（民警）</p>
+					<a class="color-fff floatrit hoverin hoverout" href="daily-practice.htm"><span class="glyphicon glyphicon-arrow-left "></span>返回</a>
+				</div>
+				<div class="panel-body minheight">
+					<div class="input-group-box col-lg-12 col-md-12 col-sm-12">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">任务名称</div>
+							<input id="text9" type="text" class="form-control color999" value="请输入考试名称"  placeholder="" onBlur="textBlur(this)" onFocus="textFocus(this)" />
+						</div>
+					</div>
+					<div class="input-group-box col-lg-12 col-md-12 col-sm-12">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">题库选择</div>
+							<select id="topicchoose" name="jiankong" style="height:60px">
+								<option value="0">人民**执法资格考试题库中级（2016）</option>
+								<option value="1">人民**执法资格考试题库高级（2016）</option>
+							</select>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">开始日期</div>
+							<input type="text" id="ui_timepicker2" name="datetime" class="ui_timepicker form-control" value="" />
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">结束日期</div>
+							<input type="text" id="ui_timepicker3" name="datetime" class="ui_timepicker form-control" value="" />
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">开考时间</div>
+							<input type="text" id="ui_timepicker4" name="datetime" class="ui_timepicker form-control" value="" />
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">题目数量</div>
+							<input type="text" id="" name="datetime" class=" form-control" value="" />
+						</div>
+					</div>
+					<div class="input-group-box col-lg-12 col-md-12 col-sm-12">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">人员选择</div>
+							<div class="form-control minheight250 padding-8 borderrightnone">
+								张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；
+								王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；
+								陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；
+								李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；
+								李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；
+								李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；
+								陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺(；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅；
+							张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；
+							张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；王毅；张安顺；李丹；李静；李思；陈燕；王毅； 张安顺；李丹；李静；李思；陈燕；
+							</div>
+							<div class="width7 input-group-addon glyuser"id="myModal1234" data-toggle="modal" data-target="#myModal1">
+								<span class="glyphicon glyphicon-user "></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 padding-10">
+						<div class="floatrit">
+							<span class="color666 ">共选择人员:　</span>
+							<span class="color4E7AA7 floatrit"> 2000人　 </span>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">任务定制</div>
+							<input id="text8" type="text"  name="" class=" form-control color999" value="请输入定制人" onBlur="textBlur(this)" onFocus="textFocus(this)"/>
+						</div>
+					</div>
+					<div class="input-group-box col-lg-6 col-md-6 col-sm-6">
+						<div class="input-group col-lg-12 col-md-12 col-sm-12">
+							<div class="input-group-addon width150">提交时间</div>
+							<input type="text" id="ui_timepicker5" name="datetime" class="ui_timepicker form-control" value="" />
+						</div>
+					</div>
+					<div class="boxmar col-lg-12 col-md-12">
+						<div class="btn btn-default brgsubmitn">
+							取 　 消
+						</div>
+						<div class="btn btn-info brgsubmit">
+							提 　 交
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+        	作者：306794978@qq.com
+        	时间：2016-07-21
+        	描述：模态窗口
+        -->
+		<div id="" class="">
+					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document"style="height: 680px ;overflow:hidden;width: 920px!important; max-height: 1000px;">
+							<div class="modal-content">
+								<div class="modal-header brgclorblue">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">人员选择</h4>
+								</div>
+								<div id="setnotice" class="modal-body "style="height: 540px ;overflow:auto;">
+									<div id="stypediv3" class=" modalfont col-lg-12 col-md-12">
+										<div id="" class=" divleft-box width28">
+											<div class="divleft">
+												<div class="ztree-top">
+													单位选择
+											</div>
+											<div class="ztree-box">
+												<ul id="treeDemo" class="ztree"></ul>
+											</div>
+										</div>
+						</div>
+						<div id="" class=" divmiddle-box  width37 textoverflow">
+							<div id="" class="divtopleft current">
+								民　　警
+							</div>
+							<div id="" class="divtopright margin-0">
+								协　　警
+							</div>
+							<li class="dropdown ropdownbox bordernone margin-0">
+								<a class="name jsoshow" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">全　部<span class="caret"></span></a>
+								<ul class="dropdown-menu kw-nav-name dropdownul　dropdown-menu-left">
+									<li id="allpeople" class="">全　部</li>
+									<li id="item-primary" class="primary1">初　级</li>
+									<li id="item-intermediate" class="intermediate1">中　级</li>
+									<li id="item-senior" class="senior1">高　级</li>
+
+								</ul>
+							</li>
+
+							<div id="allchoose" class="allchoose btn btn-primary ">
+								全选
+							</div>
+							<div id="allchoosedel" class="allchoose btn btn-primary dpynone">
+								重置
+							</div>
+							<div id="middleulli" class=" divmiddle textoverflow">
+								<ul class="ul-left">
+									<li delids="nonn" class="primary"><input type="checkbox" class="checkboxclick" name="张三" id="" value="张三" /><span class="sp-algn-left">张三</span><span class="sp-algn">······························    </span><span class="colorgray">初级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="intermediate"><input type="checkbox" class="checkboxclick" name="李四12" id="" value="李四12" /><span class="sp-algn-left">李四12</span><span class="sp-algn">······························    </span><span class="colorblue">中级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="senior"><input type="checkbox" class="checkboxclick" name="王五3" id="" value="王五3" /><span class="sp-algn-left">王五3</span><span class="sp-algn">······························    </span><span class="colorgorange">高级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="primary"><input type="checkbox" class="checkboxclick" name="张三12" id="" value="张三12" /><span class="sp-algn-left">张三12</span><span class="sp-algn">······························    </span><span class="colorgray">初级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="intermediate"><input type="checkbox" class="checkboxclick" name="李四124" id="" value="李四124" /><span class="sp-algn-left">李四124</span><span class="sp-algn">······························    </span><span class="colorblue">中级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="senior"><input type="checkbox" class="checkboxclick" name="王五45" id="" value="王五45" /><span class="sp-algn-left">王五45</span><span class="sp-algn">······························    </span><span class="colorgorange">高级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="primary"><input type="checkbox" class="checkboxclick" name="张三87" id="" value="张三87" /><span class="sp-algn-left">张三87</span><span class="sp-algn">······························    </span><span class="colorgray">初级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="intermediate"><input type="checkbox" class="checkboxclick" name="李四24" id="" value="李四24" /><span class="sp-algn-left">李四24</span><span class="sp-algn">······························    </span><span class="colorblue">中级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="senior"><input type="checkbox" class="checkboxclick" name="五123" id="" value="五123" /><span class="sp-algn-left">五123</span><span class="sp-algn">······························    </span><span class="colorgorange">高级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="primary"><input type="checkbox" class="checkboxclick" name="张三11" id="" value="张三11" /><span class="sp-algn-left">张三11</span><span class="sp-algn">······························    </span><span class="colorgray">初级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="intermediate"><input type="checkbox" class="checkboxclick" name="李四22" id="" value="李四22" /><span class="sp-algn-left">李四22</span><span class="sp-algn">······························    </span><span class="colorblue">中级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="senior"><input type="checkbox" class="checkboxclick" name="王五44" id="" value="王五44" /><span class="sp-algn-left">王五44</span> <span class="sp-algn">······························    </span><span class="colorgorange">高级</span>
+										<div class="wh20"></div>
+									</li>
+
+								</ul>
+								<ul class="ul-right dpynone textoverflow">
+									<li delids="nonn" class="primary "><input type="checkbox" class="checkboxclick" name="张三" id="" value="张三8" /><span class="sp-algn-left">张三8</span><span class="sp-algn">······························    </span><span class="colorgray">初级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="intermediate"><input type="checkbox" class="checkboxclick" name="54654" id="" value="李四8" /><span class="sp-algn-left">李四8</span><span class="sp-algn">······························    </span><span class="colorblue">中级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="senior"><input type="checkbox" class="checkboxclick" name="" id="4321" value="王五8" /><span class="sp-algn-left">王五8</span><span class="sp-algn">······························    </span><span class="colorgorange">高级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="primary"><input type="checkbox" class="checkboxclick" name="" id="12312" value="张三6" /><span class="sp-algn-left">张三6</span><span class="sp-algn">······························    </span><span class="colorgray">初级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="intermediate"><input type="checkbox" class="checkboxclick" name="87" id="" value="李四6" /><span class="sp-algn-left">李四6</span><span class="sp-algn">······························    </span><span class="colorblue">中级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="senior"><input type="checkbox" class="checkboxclick" name="" id="435" value="王五6" /><span class="sp-algn-left">王五6</span><span class="sp-algn">······························    </span><span class="colorgorange">高级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="primary"><input type="checkbox" class="checkboxclick" name="" id="17" value="张三7" /><span class="sp-algn-left">张三7</span><span class="sp-algn">······························    </span><span class="colorgray">初级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="intermediate"><input type="checkbox" class="checkboxclick" name="45" id="" value="李四7·" /><span class="sp-algn-left">李四7</span><span class="sp-algn">······························    </span><span class="colorblue">中级</span>
+										<div class="wh20"></div>
+									</li>
+									<li delids="nonn" class="senior"><input type="checkbox" class="checkboxclick" name="777" id="" value="王五7" /><span class="sp-algn-left">王五7</span><span class="sp-algn">······························    </span><span class="colorgorange">高级</span>
+										<div class="wh20"></div>
+									</li><span class="sp-algn-left"></span>
+
+								</ul>
+							</div>
+						</div>
+						<div id="" class=" lastdiv-box width35 textoverflow ">
+							<div class="divlast-top current col-lg-5 col-md-5">
+								选中人员
+							</div>
+							<div id="choosepeople" class="col-lg-6 col-md-6 floatrit">
+								共选中　<span class="colorgreen">1000</span>　人
+							</div>
+							<div class="divlast">
+								<ul id="add-del">
+
+								</ul>
+							</div>
+						</div>
+						<div class=" padding-10  width28 marginleft036">
+							 <div class="btn btn-success subtree"data-dismiss="modal">
+							 	确　定
+							 </div>
+							 <div class="btn btn-danger subtree floatrit"data-dismiss="modal">
+							 	取　消
+							 </div>
+						</div>
+					</div>
+								</div>
+								<div class="modal-footer dpynone">
+									<button type="button" class="btn btn-default " data-dismiss="modal">关闭</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+	</div>
+		
+		<script type="text/javascript" src="../../js/examMng/datetime.js"></script>
+		<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-ui-timepicker-addon.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery-ui-timepicker-zh-CN.js"></script>
+		<script type="text/javascript" src="../../js/examMng/jquery.ztree.core.js" ></script>
+		<script type="text/javascript" src="../../js/examMng/common.js" ></script>
+		<script type="text/javascript" src="../../js/global.js"></script>
+		<script type="text/javascript" src="../../js/jquery.selectlist.js" ></script>
+		<script type="text/javascript" src="../../js/examMng/exam-org-add-exam.js" ></script>
+		<script type="text/javascript" src="../../js/tooltip.js" ></script>
+		<script type="text/javascript">
+		var nnwidth;
+		var titleType = 0;
+		var value8 = $("#text8").val()
+		var value9 = $("#text9").val()
+		//select下拉框模拟
+		$(function() {
+			$('#topicchoose').selectlist({
+				zIndex: 10,
+				height: 60,
+				onChange: null
+			});
+			$("#ui_timepicker2").datetimepicker({
+		showOn: "button",
+		buttonImage: "../../images/examMng/icon_calendar.gif",
+		//buttonImageOnly: false,
+		showSecond: false,
+		showMinute:false,
+		showHour:false,
+		timeFormat: '',
+		stepHour: 0,
+		stepMinute: 0,
+		stepSecond: 0
+	})
+
+		});
+		$("#ui_timepicker3").datetimepicker({
+		showOn: "button",
+		buttonImage: "../../images/examMng/icon_calendar.gif",
+		//buttonImageOnly: false,
+		showSecond: false,
+		showMinute:false,
+		showHour:false,
+		timeFormat: '',
+		stepHour: 0,
+		stepMinute: 0,
+		stepSecond: 0
+	})
+		$("#ui_timepicker4").datetimepicker({
+		showOn: "button",
+		buttonImage: "../../images/examMng/icon_calendar.gif",
+		//buttonImageOnly: false,
+		showSecond: false,
+		timeFormat: 'hh:mm:ss',
+		stepHour: 1,
+		stepMinute: 1,
+		stepSecond: 1
+	})
+		$("#ui_timepicker5").datetimepicker({
+		showOn: "button",
+		buttonImage: "../../images/examMng/icon_calendar.gif",
+		//buttonImageOnly: false,
+		showSecond: true,
+		timeFormat: 'hh:mm:ss',
+		stepHour: 1,
+		stepMinute: 1,
+		stepSecond: 1
+	})
+		$(document).ready(function(){
+			debugger
+			$('[data-toggle="tooltip"]').tooltip()
+			
+		
+		 nnwidth =$(".ui_timepicker").width()-60+"px"
+		$(".ui_timepicker").width(nnwidth);
+	})
+
+	$("#text9").blur(function() {
+		if($(this).val() == value9 || $(this).val() == "") {
+			$(this).css("border-color", "red")
+			$(this).parent().append('<span class="jinggao text22">' + value9 + '</span>')
+			var spanposition = $(this).parent().width() - $(this).parent().find("span").width() + "px"
+			$(this).parent().find("span").css("left", spanposition)
+		} else {
+			$(this).parent().find("span").remove()
+			$(this).css("border-color", "#CCCCCC")
+		}
+	})
+	$("#text9").focus(function() {
+		$(this).parent().find("span").remove()
+		$(this).css("border-color", "#CCCCCC")
+	})
+	$("#text8").blur(function() {
+		if($(this).val() == value8 || $(this).val() == "") {
+			$(this).css("border-color", "red")
+			$(this).parent().append('<span class="jinggao text22">' + value8 + '</span>')
+			var spanposition = $(this).parent().width() - $(this).parent().find("span").width() + "px"
+			$(this).parent().find("span").css("left", spanposition)
+		} else {
+			$(this).parent().find("span").remove()
+			$(this).css("border-color", "#CCCCCC")
+		}
+	})
+	$("#text8").focus(function() {
+		$(this).parent().find("span").remove()
+		$(this).css("border-color", "#CCCCCC")
+	})
+	
+	
+		
+	
+		
+		
+			
+	</script>
+	</body>
+
+</html>

@@ -1,0 +1,171 @@
+@media  screen and (max-width:768px ) {
+.headbg-a1,
+.headbg-a2,
+.headbg-a3 {
+	display: none;
+}
+.formedia-p
+{
+	display: block;
+}
+.TiShiXinxi
+{
+	margin: 0 5px 0 5px;
+}	
+/*中间内容开始*/
+.middle{
+	border: none;
+	
+}
+.middle-left
+{
+	border-bottom: 2px solid #E6E6E6;
+}
+.middle-left-book
+{
+	border: none;
+}
+#imgdisplaynone
+{
+	display: none;
+}
+.middle-left-btn
+{
+	
+}
+.middle-left-btnformedia
+{
+	
+}
+.middle-right
+{
+	border-bottom: 2px solid #E6E6E6;
+}
+#btnformedia
+{
+	padding: 0 45px;
+}
+.tishi-box-second
+{
+	display: none;
+}	
+.tishi-box-second-diapalynone
+{
+	display: block;
+}
+/*中间内容*/
+.middle-left-book
+{
+	margin-top: 0;
+	padding: 0;
+}
+.middle-left-img
+{
+	margin-top: 0;
+	padding: 0;
+}
+.middle-left-p1,
+.middle-left-p6
+{
+	font-size: 16px;
+	margin-top: 0px;
+}
+.TiShiXinxi{
+	margin: 16px 0 0 ;
+}
+.middle-left-btn
+{
+	margin-top: 0px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+.middle-left-p2,
+.middle-left-p3,
+.middle-left-p4,
+.middle-left-p5 {
+	letter-spacing: 1px;
+	padding-left: 0px;
+	margin:  0;
+	
+}
+
+}
+@media only screen and (min-width: 100px) and (max-width: 400px) {
+	
+.btn-my {
+	width:65px;
+	height:65px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #00A500;
+	box-shadow: 0px 0px 6px #122B40;
+	padding-top: 22px;
+	margin-left: 0px;
+	color: #FFFFFF;
+	border: none;
+	font-size: 12px;
+	text-align: center;
+	padding-left:0px;
+}
+.middle-last-crlbtn{
+	position: relative;
+	top: -32px;
+}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+ .nv-cencer,
+ .headbg-p,
+.headbg-a1,
+ .headbg-a2,
+.headbg-a3 {
+	display: none;
+}
+.kw-header{
+	display: none;
+}
+.top-pformedia
+{
+	display: block;
+	padding-left:10px;
+}
+.mediaforw320
+{
+	display: block;
+
+}
+#displayno768
+{
+	display: none;
+}
+}
+
+}
+@media only screen and (min-width: 100px) and (max-width: 300px) {
+#mediamin300{
+		padding: 0 5px;
+	}
+}
+@media only screen and (min-width: 100px) and (max-width: 360px) {
+
+	
+}
+/*对bootstrap插件做样子修改*/
+.tooltip-inner
+{
+	max-width: 400px;
+	color: #222222;
+	border: 2px solid #CCCCCC;
+	background-color: #FFFFFF;
+	font-size: 18px;
+	text-align: left;
+	text-indent: 2em;
+	border-radius:6px ;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.tooltip-arrow
+{
+	border-bottom-color: #C0C0C0 ;
+}

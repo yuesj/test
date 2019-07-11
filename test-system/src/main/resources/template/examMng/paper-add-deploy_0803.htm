@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/core.css">
+		<link rel="stylesheet" type="text/css" href="../../css/examMng/paperMng.css">
+		<!--<script src="../../js/respond.js"></script>-->
+		
+	
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+				
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../../js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js" ></script>
+		<script src="../../js/jquery.selectlist.js" ></script>
+		<script>
+			$(function () { $("[data-toggle='tooltip']").tooltip(); });
+			
+		</script>
+	</head>
+	<body>
+		<!--head begin-->
+		<div id="header" class="header headbg">
+		  <div class="container">
+			<!-- Logo -->
+			<div class="logo pull-left" href="login_index.htm">
+				<img src="../../images/logo.png" alt="系统首页">
+				<h3 class="pc_title">考务管理</h3>
+			</div>
+			<div class="navbar-collapse pull-right nav-main-collapse collapse">
+				<nav class="nav-main">
+					<ul id="topMain" class="nav nav-pills nav-main">
+						<li class="dropdown"><a class="dropdown-toggle" href="item-list.htm">题库管理</a></li>
+						<li class="dropdown active"><a class="dropdown-toggle" href="paper-list.htm">试卷管理</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="exam-org.htm">考试组织</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="#">考试统计</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" href="daily-practice.htm">每日练习</a></li>
+						<li class="dropdown mega-menu"><!-- 用户信息 -->
+							<a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="glyphicon glyphicon-user"></i> 金涛 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#"><i class="glyphicon glyphicon-user"></i> 用户信息</a></li>
+								<li><a href="#"><i class="glyphicon glyphicon-off"></i> 退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!--head end-->
+		
+		<!--body begin-->
+		<div class="main-container">
+			<div class="container body-box">
+				<div class="title-top">
+					<p>民警执法资格等级考试试卷（中级）A卷——<span class="rcolor">试卷配置</span></p>
+					<a href="javascript:history.go(-1);" class="retun"><i class="glyphicon glyphicon-arrow-left"></i>返回</a>
+				</div>
+				<div class="paper-content">
+					<div class="outcontent">
+						<!--步骤 begin-->
+						<div class="border_line">
+				        	<div id="fuelux-wizard" class="row-fluid" data-target="#step-container">
+								<ul class="wizard-steps">
+									<li class="nav_complete">
+										<span class="step"><i class="glyphicon glyphicon-ok"></i></span>
+										<span class="title">试卷基本信息</span>
+									</li>
+				
+									<li class="nav_active">
+										<span class="step">2</span>
+										<span class="title">试卷配置信息</span>
+									</li>
+				
+									<li>
+										<span class="step">3</span>
+										<span class="title">试卷发布</span>
+									</li>
+								</ul>
+							</div>
+				        </div><!-- /.col -->
+						<!--步骤 end-->
+						<!--试卷配置信息 begin-->
+						<div class="deploy-main"> 
+							<div class="deploy-top">
+								<a id="addexam" class="btn btn-default add-exam"><i class="glyphicon glyphicon-plus-sign"></i>请选择试题类型</a>
+								<!--<a class="btn btn-default loading">载入模板</a>-->
+							</div>
+							<div id="deployadd" class="deploy-content" style="min-height: 314px;">
+								<div class="deploybox row">
+									<div class="col-lg-11 col-md-11 line-right">
+										<div class="input-group input-group-lg deploytype">
+											<span class="input-group-addon">题目类型</span>
+											<select name="jinji" >
+												<option value="0">判断题</option>
+												<option value="1">单项选择题</option>
+												<option value="2">多项选择题</option>
+											</select>
+										</div>
+										<div class="row">
+											<div class="col-lg-6 col-md-6 nopadleft">
+												<div class="input-group input-group-lg deploytype ">
+													<span class="input-group-addon zjj">数量</span>
+													<input type="text" class="form-control" value="请输入所选试题类型总数" onBlur="textBlur(this)" onFocus="textFocus(this)" >
+													<div class="input-group-addon">题</div>
+												</div>
+											</div>
+											<div class="col-lg-6 col-md-6 nopadright">
+												<div class="input-group input-group-lg deploytype">
+													<span class="input-group-addon zjj">分值</span>
+													<input type="text" class="form-control" value="请输入该类型试题分值" onBlur="textBlur(this)" onFocus="textFocus(this)" >
+													<div class="input-group-addon">分/题</div>
+												</div>
+											</div>
+										</div>
+										<div class="input-group input-group-lg deploytype">
+											<span class="input-group-addon zsd" >知识点</span>
+											<input type="text" class="form-control konwsbox" data-toggle="modal" data-target="#close-cn" value="请选择该类试题涵盖的知识点及所占分数" onBlur="textBlur(this)" onFocus="textFocus(this)" >						
+										</div>
+									</div>
+									<div class="col-lg-1 col-md-1">
+										<div class="deletebox">
+											<i class="glyphicon glyphicon-trash"></i>
+											<a >删除</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--试卷配置信息 end-->
+						<div class="btnbox">
+							<a class="btn btn-success" onclick="javascript:window.location.href='paper-add-basic.htm';"><i class="glyphicon glyphicon-arrow-left" style="margin-left:0;"></i>上一步</a>
+							<a class="btn btn-info" onclick="javascript:window.location.href='paper-add-issue.htm';">下一步<i class="glyphicon glyphicon-arrow-right" style="margin-right:0;"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--body end-->
+		
+		<!--知识点选择弹窗-->
+		<div id="close-cn" class="modal fade" tabindex="-1">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		        	<!--知识点选择header开始-->
+		            <div class="modal-header knowsheader">
+		                <div class="table-header border-top-radius">
+		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+		                        <span class="white">&times;</span>
+		                    </button>
+		                    	知识点选择：
+		                </div>
+		            </div>
+		        	<!--知识点选择header结束-->
+		        	<!--知识点选择body开始-->
+		            <div class="modal-body knowsbody">
+		            	<div class="text-left knowsbody-nav">判断题：<span>总数20道，可用分数20分，已用1题，已用1分。</span></div>
+		            	<div class="knowsbody-main">
+		            		<ul class="knowsmain">
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>社会主义法治理念（32道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>法律基本概念（27道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>宪法（51道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>人民**法（46道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>社会主义法治理念（32道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>社会主义法治理念（32道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>社会主义法治理念（32道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            			<li>
+		            				<div class="onebox">
+			            				<input type="checkbox" class="fxkbox" name="zsd_cb" />
+			            				<span>社会主义法治理念（32道题可选）</span>
+		            				</div>
+		            				<div class="twobox">
+			            				<input type="text" class="srkbox" placeholder="0" />
+			            				<span>题</span>
+		            				</div>
+		            				<div class="score">
+		            					<span>0分</span>
+		            				</div>
+		            			</li>
+		            		</ul>
+		            	</div>
+		            </div>
+		        	<!--知识点选择body结束-->
+		        	<!--知识点选择footer开始-->
+		        	<!--知识点选择footer结束-->
+		        </div>
+		    </div>
+		</div>
+		<!--知识点选择弹窗-->
+		
+		<!--footer begin-->
+		<div class="footer">
+			<p>©某某市公安局-2016</p>
+			<p>技术支持：服务有限公司®&nbsp;&nbsp;13000000000</p>
+		</div>
+		<!--footer end-->
+		
+		<script type="text/javascript">
+			
+			//文本框默认提示文字
+			function textFocus(el) {
+			    if (el.defaultValue == el.value) { el.value = ''; el.style.color = '#333'; }
+				$(el).parent().find(".validate_input").css("display","none");
+			}
+			function textBlur(el) {
+			    if (el.value == '') { el.value = el.defaultValue; el.style.color = '#999'; }
+			}
+
+			//打开模态窗口
+			$('#close-cn').modal({backdrop: 'static', keyboard: false , show: false});
+			
+			//paper-add-deploy.htm添加试题类型按钮
+			$(document).ready(function() {
+			
+				var score = 0; //一道题的分值
+				var scorenums = 0; //试题总数量
+			
+				var choosenums = 0; //已经使用了多少道题
+				var choosescore = 0; //已经使用了多少分
+				$('#addexam').click(function() {
+					var tipcon =
+						'<div class="deploybox row">' +
+						'<div class="col-lg-11 col-md-11 line-right">' +
+						'<div class="input-group input-group-lg deploytype">' +
+						'<span class="input-group-addon">题目类型</span>' +
+						'<select name="jinji" >' +
+						'<option value="0">判断题</option>' +
+						'<option value="1">单项选择题</option>' +
+						'<option value="2">多项选择题</option>' +
+						'</select>' +
+						'</div>' +
+						'<div class="row">' +
+						'<div class="col-lg-6 col-md-6 nopadleft">' +
+						'<div class="input-group input-group-lg deploytype ">' +
+						'<span class="input-group-addon zjj">数量</span>' +
+						'<input type="text" class="form-control" placeholder="请输入所选试题类型总数">' +
+						'<div class="input-group-addon">题</div>' +
+						'</div>' +
+						'</div>' +
+						'<div class="col-lg-6 col-md-6 nopadright">' +
+						'<div class="input-group input-group-lg deploytype">' +
+						'<span class="input-group-addon zjj">分值</span>' +
+						'<input type="text" class="form-control" placeholder="请输入该类型试题分值">' +
+						'<div class="input-group-addon">分/题</div>' +
+						'</div>' +
+						'</div>' +
+						'</div>' +
+						'<div class="input-group input-group-lg deploytype">' +
+						'<span class="input-group-addon zsd" >知识点</span>' +
+						'<input type="text" class="form-control konwsbox" data-toggle="modal" data-target="#close-cn" placeholder="请选择该类试题涵盖的知识点及所占分数">' +
+						'</div>' +
+						'</div>' +
+						'<div class="col-lg-1 col-md-1">' +
+						'<div class="deletebox">' +
+						'<i class="glyphicon glyphicon-trash"></i>' +
+						'<a>删除</a>' +
+						'</div>' +
+						'</div>' +
+						'</div>';
+					$('#deployadd').append(tipcon);
+					// 删除表单
+					$('.deletebox a').click(function() {
+						$(this).parent().parent().parent().remove();
+					});
+			
+					////////////////////////////////////////////////////////////////////////////////
+					//获取 一道题 的分值
+					//获取 试题总数量
+					$(".konwsbox").click(function() {
+						
+						score = 0; //一道题的分值
+						scorenums = 0; //试题总数量
+					
+						choosenums = 0; //已经使用了多少道题
+						choosescore = 0; //已经使用了多少分
+						var num = $(this).parent().parent().parent().index();
+						score = $("#deployadd").children().eq(num).find(".line-right").children().eq(1).children().eq(1).children().eq(0).children().eq(1).val();
+						scorenums = $("#deployadd").children().eq(num).find(".line-right").children().eq(1).children().eq(0).children().eq(0).children().eq(1).val();
+			
+						$(".knowsbody").children().eq(0).find("span").text("总数" + scorenums + "道，可用分数" + scorenums * score + "分，已用" + choosenums + "题，已用" + choosescore + "分。");
+					});
+				});
+				// 删除表单
+				$('.deletebox a').click(function() {
+					$(this).parent().parent().parent().remove();
+				});
+			
+				////////////////////////////////////////////////////////////////////////////////
+				//获取 一道题 的分值
+				$(".konwsbox").click(function() {
+					score = 0; //一道题的分值
+					scorenums = 0; //试题总数量
+				
+					choosenums = 0; //已经使用了多少道题
+					choosescore = 0; //已经使用了多少分
+					var num = $(this).parent().parent().parent().index();
+					score = $("#deployadd").children().eq(num).find(".line-right").children().eq(1).children().eq(1).children().eq(0).children().eq(1).val();
+					scorenums = $("#deployadd").children().eq(num).find(".line-right").children().eq(1).children().eq(0).children().eq(0).children().eq(1).val();
+			
+					$(".knowsbody").children().eq(0).find("span").text("总数" + scorenums + "道，可用分数" + scorenums * score + "分，已用" + choosenums + "题，已用" + choosescore + "分。");
+				});
+			
+				//当输入试题数量后计算当前选择了多少题，共多少分
+				$(".knowsmain li .twobox .srkbox").blur(function() {
+					var num = $(this).parent().parent().index();
+					var nums = $(".knowsmain li").length;
+			
+					var temp = $(".knowsmain").children().eq(num).find(".twobox").find(".srkbox").val();
+					$(".knowsmain").children().eq(num).find(".score").find("span").text(temp * score + "分");
+			
+					$(".knowsbody").children().eq(0).find("span").text("总数" + scorenums + "道，可用分数" + scorenums * score + "分，已用" + choosenums + "题，已用" + choosescore + "分。");
+				});
+			
+				//当勾选时 checkbox
+				$(".knowsmain li .onebox .fxkbox").click(function() {
+					var num = $(this).parent().parent().index();
+					var nums = $(".knowsmain li").length;
+					
+					if($(this).prop("checked") == true){
+						var temp = parseInt($(".knowsmain").children().eq(num).find(".twobox").find(".srkbox").val());
+						if(choosenums + temp <= scorenums){
+							choosenums += temp;
+							choosescore += temp*score;
+							$(".knowsbody").children().eq(0).find("span").text("总数"+scorenums+"道，可用分数"+(scorenums*score - choosescore)+"分，已用"+choosenums+"题，已用"+choosescore+"分。");	
+						}else{
+							$(this).prop("checked",false);
+						}
+					}else{
+						var temp = parseInt($(".knowsmain").children().eq(num).find(".twobox").find(".srkbox").val());
+						choosenums -= temp;
+						choosescore -= temp*score;
+						$(".knowsbody").children().eq(0).find("span").text("总数"+scorenums+"道，可用分数"+(scorenums*score - choosescore)+"分，已用"+choosenums+"题，已用"+choosescore+"分。");
+					}
+					
+				});
+				
+				
+				//当点击知识点输入框时，需要判断 数量 和 分值  如果为空则提示输入
+				$('#close-cn').on('shown.bs.modal', function () {
+					// 执行一些动作...
+					if(score == 0 || scorenums == 0){
+						alert("请正确赋值数量与分值选项！");
+						$('#close-cn').modal('hide');
+					}else{
+						//先检索checkbox所有true，全部改为false
+						$("input[name='zsd_cb']").each(function(){
+							$(this).prop("checked",false);
+						});
+						
+					}
+				})
+				//当弹窗隐藏时清除所有公共字段的值
+				$('#identifier').on('hidden.bs.modal', function () {
+					// 执行一些动作...
+					score = 0; //一道题的分值
+					scorenums = 0; //试题总数量
+				
+					choosenums = 0; //已经使用了多少道题
+					choosescore = 0; //已经使用了多少分
+				})
+			});
+			
+			
+		</script>
+		
+	</body>
+</html>

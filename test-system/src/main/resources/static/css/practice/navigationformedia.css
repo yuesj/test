@@ -1,0 +1,33 @@
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+ .nv-cencer,
+ .headbg-p,
+.headbg-a1,
+ .headbg-a2,
+.headbg-a3 {
+	display: none;
+}
+.kw-header{
+	display: none;
+}
+.top-pformedia
+{
+	display: block;
+	padding-left:10px;
+}
+.mediaforw320
+{
+	display: block;
+
+}
+#displayno768
+{
+	display: none;
+}
+}
+
+}
+@media only screen and (min-width: 100px) and (max-width: 300px) {
+#mediamin300{
+		padding: 0 5px;
+	}
+}
